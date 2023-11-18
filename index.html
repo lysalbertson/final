@@ -5,20 +5,20 @@
     <title>Digital Garden</title>
   </head>
   <style>
-   .album-container {
+    .album-container {
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
       padding-top: 3vh;
-      display: 
-      
+
     }
-    .pure-heroine{
-     position: relative;
-    display: inline-block;
+
+    .pure-heroine {
+      position: relative;
+      display: inline-block;
     }
-    
+
     .ph-review {
-      display:none;
+      display: none;
       font-size: 18px;
       width: 200px;
       height: 200px;
@@ -28,28 +28,32 @@
       left: calc(100% + 1vw);
       top: 0;
     }
-    .pure-heroine-img{
+
+    .pure-heroine-img {
       height: 200px;
       width: 200px;
-       
+
+
     }
-      .albums {
+
+    .albums {
       height: 200px;
       width: 200px;
-     display: inline-block;
-    
-      
+      display: inline-block;
+      transition: transform .7s ease-out;
+
+
     }
-    .pure-heroine:hover + .albums{
-      transform: translateX(210px)
-      
-   
+
+    .pure-heroine:hover+.albums {
+      transform: translateX(210px);
     }
+
     .pure-heroine:hover .ph-review {
       display: block;
-      ;
-     }
-    
+
+    }
+
     .movies-tv-container {
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
@@ -77,13 +81,13 @@
   <body>
 
     <div class="album-container">
-       <div class="pure-heroine">
-      <img class="pure-heroine-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lorde_Pure_Heroine.png/800px-Lorde_Pure_Heroine.png" alt="description of image">
-     
-     <div class="ph-review"> this is me talking about something<br>
-   but its actually much longer and why<br>is this fucking up my fomratting so much<br> I'll figure it out very shortly<br> just need text that feels realistic
-         </div>
+      <div class="pure-heroine">
+        <img class="pure-heroine-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lorde_Pure_Heroine.png/800px-Lorde_Pure_Heroine.png" alt="description of image">
+
+        <div class="ph-review"> this is me talking about something<br>
+          but its actually much longer and why<br>is this fucking up my fomratting so much<br> I'll figure it out very shortly<br> just need text that feels realistic
         </div>
+      </div>
       <img class="albums" src="https://upload.wikimedia.org/wikipedia/en/2/25/Megan_Thee_Stallion_-_Tina_Snow.png" alt="description of image">
     </div>
     <div class="movies-tv-container">
