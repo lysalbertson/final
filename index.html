@@ -5,6 +5,14 @@
     <title>Digital Garden</title>
   </head>
   <style>
+    body{
+      background-color: pink
+    }
+    h1{
+      font-size: 14px;
+      text-align: center
+    }
+  
     .album-container {
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
@@ -15,17 +23,16 @@
     .pure-heroine {
       position: relative;
       display: inline-block;
-      filter: blur(3px);
-      transition: filter 1s ease;
+      
+      
     }
 
     .ph-review {
       display: none;
-      font-size: 18px;
+      font-size: 12px;
       width: 200px;
       height: 200px;
-      background-color: blue;
-      text-align: center;
+      text-align: left;
       position: absolute;
       left: calc(100% + 1vw);
       top: 0;
@@ -35,21 +42,32 @@
       height: 200px;
       width: 200px;
 
-
     }
-
-    .albums {
+ .tina-snow {
+      position: relative;
+   display: inline-block;
+    transition: transform .7s ease;}
+    
+    
+    .tina-snow-img {
       height: 200px;
       width: 200px;
       display: inline-block;
-      transition: transform .7s ease;
-
-
-    }
-
-    .pure-heroine:hover+.albums {
-      transform: translateX(210px);
       
+    }
+     .ts-review {
+      display: none;
+      font-size: 12px;
+      width: 200px;
+      height: 200px;
+      text-align: left;
+      position: absolute;
+      left: calc(100% + 1vw);
+       top: 0;}
+
+    .pure-heroine:hover +.tina-snow {
+      transform: translateX(210px);
+      filter: blur(3px)
     }
 
     .pure-heroine:hover .ph-review {
@@ -89,15 +107,61 @@
   <body>
 
     <div class="album-container">
+      <div class="albums">
       <div class="pure-heroine">
-        <img class="pure-heroine-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lorde_Pure_Heroine.png/800px-Lorde_Pure_Heroine.png" alt="description of image">
+        <img class="pure-heroine-img" src="Lorde_Pure_Heroine.png" alt="description of image">
 
-        <div class="ph-review"> this is me talking about something<br>
-          but its actually much longer and why<br>is this fucking up my fomratting so much<br> I'll figure it out very shortly<br> just need text that feels realistic
+        <div class="ph-review"> 
+          <h1>
+            God, I wish it was 2013.
+          </h1>
+          <div class="music-ranks">
+          1. 400 Lux<br>
+          2. Tennis Court<br>
+          3. Ribs<br>
+          4. Team<br>
+          5. World Alone<br>
+          6. Glory and Gore<br>
+          7. Royals<br>
+          8. Buzzcut Season<br>
+            </div>
+          <h1>
+          Skips:
+          </h1>
+          Still Sane<br>
+          White Teeth Teens
         </div>
       </div>
-      <img class="albums" src="https://upload.wikimedia.org/wikipedia/en/2/25/Megan_Thee_Stallion_-_Tina_Snow.png" alt="description of image">
+        <div class="tina-snow">
+      <img class="tina-snow-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
+          <div class="ts-review">
+             <h1>
+           I would die for Megan thee Stallion
+          </h1>
+          <div class="music-ranks">
+          1. Hot Girl<br>
+          2. Big Ole Freak<br>
+          3. Freak Nasty<br>
+          4. Good At<br>
+          5. Cognac Queen<br>
+          6. Neva<br>
+          7. Tina Montana<br>
+          8. Cocky Af<br>
+          9. Make a Bag<br>
+            </div>
+          <h1>
+          Skips:
+          </h1>
+          WTF I Want
+          </div>
+          </div>
     </div>
+      </div>
+      
+      
+      
+      
+      
     <div class="movies-tv-container">
       <img class="movies-tv" src="https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg" alt="Lady Bird Poster">
     </div>
