@@ -19,11 +19,19 @@
       padding-bottom: 3vh;
       padding-top: 3vh;
       overflow-x: scroll;
-      overflow-y: hidden;
+    
     }
     .album-container::-webkit-scrollbar{
       display: none
-      
+    }
+    .mains{
+      color: White;
+      font-family: "title";
+      font-size: 50px
+    }
+    @font-face {
+      font-family: "title";
+      src: url("Barrio-Regular.ttf");
     }
 
     .review {
@@ -60,17 +68,6 @@
       display: block
     }
 
-    /*   .tina-snow:hover+.lungs {
-      transform: translateX(210px);
-      filter: blur(3px)
-    } 
-    .tina-snow:hover .review {
-      display: block;
-    }
-    .lungs:hover .review{
-      display: block;
-    }
-     */
 
 
     .movies-tv-container {
@@ -100,9 +97,9 @@
   <body>
 
     <div class="album-container">
+         <div class="mains">Music</div>
       <div class="album">
         <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
-
         <div class="review">
           <h1>
             God, I wish it was 2013.
@@ -123,6 +120,7 @@
         </div>
       </div>
       <div class="album">
+     
         <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
         <div class="review">
           <h1>
