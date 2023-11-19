@@ -5,26 +5,26 @@
     <title>Digital Garden</title>
   </head>
   <style>
-    body{
+    body {
       background-color: pink
     }
-    h1{
+
+    h1 {
       font-size: 14px;
       text-align: center
     }
-  
+
     .album-container {
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
       padding-top: 3vh;
-
+      
     }
+
 
     .pure-heroine {
       position: relative;
-      display: inline-block;
-      
-      
+      display: inline-block
     }
 
     .ph-review {
@@ -38,24 +38,19 @@
       top: 0;
     }
 
-    .pure-heroine-img {
+    .music-img {
       height: 200px;
       width: 200px;
+    }
 
-    }
- .tina-snow {
+/*     .tina-snow {
       position: relative;
-   display: inline-block;
-    transition: transform .7s ease;}
-    
-    
-    .tina-snow-img {
-      height: 200px;
-      width: 200px;
-      display: inline-block;
-      
-    }
-     .ts-review {
+       display: inline-block;
+      transition: transform .7s ease;
+    } */
+
+
+    .ts-review {
       display: none;
       font-size: 12px;
       width: 200px;
@@ -63,22 +58,45 @@
       text-align: left;
       position: absolute;
       left: calc(100% + 1vw);
-       top: 0;}
+      top: 0;
+    }
+ .tina-snow,
+    .lungs {
+      position: relative;
+      transition: transform .7s ease;
+       display: inline-block;
+    }
 
-    .pure-heroine:hover +.tina-snow {
+    .lungs-review {
+      display: none;
+      font-size: 12px;
+      width: 200px;
+      height: 200px;
+      text-align: left;
+      position: absolute;
+      left: calc(100% + 1vw);
+      top: 0;
+    }
+
+    .pure-heroine:hover + .tina-snow{
       transform: translateX(210px);
       filter: blur(3px)
     }
-
+     .pure-heroine:hover .lungs{
+      transform: translateX(210px);
+      filter: blur(3px)
+    }
     .pure-heroine:hover .ph-review {
+      display: block
+    }
+     .tina-snow:hover + .lungs {
+      transform: translateX(210px);
+      filter: blur(3px)
+    }
+    .tina-snow:hover .ts-review {
       display: block;
-       
-
     }
-    
-    .pure-heroine:hover{
-      filter: blur(0)
-    }
+ 	  
 
     .movies-tv-container {
       border-bottom: black 3px solid;
@@ -108,60 +126,83 @@
 
     <div class="album-container">
       <div class="albums">
-      <div class="pure-heroine">
-        <img class="pure-heroine-img" src="Lorde_Pure_Heroine.png" alt="description of image">
+        <div class="pure-heroine">
+          <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
 
-        <div class="ph-review"> 
+          <div class="ph-review">
+            <h1>
+              God, I wish it was 2013.
+            </h1>
+            <div class="music-ranks">
+              1. 400 Lux<br>
+              2. Tennis Court<br>
+              3. Ribs<br>
+              4. Team<br>
+              5. World Alone<br>
+              6. Glory and Gore<br>
+              7. Royals<br>
+              8. Buzzcut Season<br>
+            </div>
+            <h1>
+              Skips:
+            </h1>
+            Still Sane<br>
+            White Teeth Teens
+          </div>
+        </div>
+        <div class="tina-snow">
+          <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
+          <div class="ts-review">
+            <h1>
+              I would die for Megan thee Stallion
+            </h1>
+            <div class="music-ranks">
+              1. Hot Girl<br>
+              2. Big Ole Freak<br>
+              3. Freak Nasty<br>
+              4. Good At<br>
+              5. Cognac Queen<br>
+              6. Neva<br>
+              7. Tina Montana<br>
+              8. Cocky Af<br>
+              9. Make a Bag<br>
+            </div>
+            <h1>
+              Skips:
+            </h1>
+            WTF I Want
+          </div>
+        </div>
+     
+
+      <div class="lungs">
+        <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
+
+        <div class="lungs-review">
           <h1>
             God, I wish it was 2013.
           </h1>
           <div class="music-ranks">
-          1. 400 Lux<br>
-          2. Tennis Court<br>
-          3. Ribs<br>
-          4. Team<br>
-          5. World Alone<br>
-          6. Glory and Gore<br>
-          7. Royals<br>
-          8. Buzzcut Season<br>
-            </div>
+            1. 400 Lux<br>
+            2. Tennis Court<br>
+            3. Ribs<br>
+            4. Team<br>
+            5. World Alone<br>
+            6. Glory and Gore<br>
+            7. Royals<br>
+            8. Buzzcut Season<br>
+          </div>
           <h1>
-          Skips:
+            Skips:
           </h1>
           Still Sane<br>
           White Teeth Teens
         </div>
       </div>
-        <div class="tina-snow">
-      <img class="tina-snow-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
-          <div class="ts-review">
-             <h1>
-           I would die for Megan thee Stallion
-          </h1>
-          <div class="music-ranks">
-          1. Hot Girl<br>
-          2. Big Ole Freak<br>
-          3. Freak Nasty<br>
-          4. Good At<br>
-          5. Cognac Queen<br>
-          6. Neva<br>
-          7. Tina Montana<br>
-          8. Cocky Af<br>
-          9. Make a Bag<br>
-            </div>
-          <h1>
-          Skips:
-          </h1>
-          WTF I Want
-          </div>
-          </div>
+         </div>
     </div>
-      </div>
-      
-      
-      
-      
-      
+
+
     <div class="movies-tv-container">
       <img class="movies-tv" src="https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg" alt="Lady Bird Poster">
     </div>
