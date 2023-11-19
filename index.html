@@ -18,16 +18,15 @@
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
       padding-top: 3vh;
-      
+
     }
 
-
-    .pure-heroine {
+/*     .pure-heroine {
       position: relative;
       display: inline-block
-    }
+    } */
 
-    .ph-review {
+    .review {
       display: none;
       font-size: 12px;
       width: 200px;
@@ -43,60 +42,38 @@
       width: 200px;
     }
 
-/*     .tina-snow {
-      position: relative;
-       display: inline-block;
-      transition: transform .7s ease;
-    } */
 
-
-    .ts-review {
-      display: none;
-      font-size: 12px;
-      width: 200px;
-      height: 200px;
-      text-align: left;
-      position: absolute;
-      left: calc(100% + 1vw);
-      top: 0;
-    }
- .tina-snow,
-    .lungs {
+/*     .tina-snow, */
+    .album {
       position: relative;
       transition: transform .7s ease;
-       display: inline-block;
+      display: inline-block;
     }
 
-    .lungs-review {
-      display: none;
-      font-size: 12px;
-      width: 200px;
-      height: 200px;
-      text-align: left;
-      position: absolute;
-      left: calc(100% + 1vw);
-      top: 0;
-    }
+   .blur {
+  filter: blur(3px); 
+}
 
-    .pure-heroine:hover + .tina-snow{
-      transform: translateX(210px);
-      filter: blur(3px)
-    }
-     .pure-heroine:hover .lungs{
-      transform: translateX(210px);
-      filter: blur(3px)
-    }
-    .pure-heroine:hover .ph-review {
+.shift {
+  transform: translateX(210px); 
+}
+
+    .album:hover .review {
       display: block
     }
-     .tina-snow:hover + .lungs {
+
+/*   .tina-snow:hover+.lungs {
       transform: translateX(210px);
       filter: blur(3px)
-    }
-    .tina-snow:hover .ts-review {
+    } 
+    .tina-snow:hover .review {
       display: block;
     }
- 	  
+    .lungs:hover .review{
+      display: block;
+    }
+     */
+
 
     .movies-tv-container {
       border-bottom: black 3px solid;
@@ -125,15 +102,13 @@
   <body>
 
     <div class="album-container">
-      <div class="albums">
-        <div class="pure-heroine">
+        <div class="album">
           <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
 
-          <div class="ph-review">
+          <div class="review">
             <h1>
               God, I wish it was 2013.
             </h1>
-            <div class="music-ranks">
               1. 400 Lux<br>
               2. Tennis Court<br>
               3. Ribs<br>
@@ -142,7 +117,6 @@
               6. Glory and Gore<br>
               7. Royals<br>
               8. Buzzcut Season<br>
-            </div>
             <h1>
               Skips:
             </h1>
@@ -150,13 +124,12 @@
             White Teeth Teens
           </div>
         </div>
-        <div class="tina-snow">
+        <div class="album">
           <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
-          <div class="ts-review">
+          <div class="review">
             <h1>
               I would die for Megan thee Stallion
             </h1>
-            <div class="music-ranks">
               1. Hot Girl<br>
               2. Big Ole Freak<br>
               3. Freak Nasty<br>
@@ -166,40 +139,37 @@
               7. Tina Montana<br>
               8. Cocky Af<br>
               9. Make a Bag<br>
-            </div>
             <h1>
               Skips:
             </h1>
             WTF I Want
           </div>
         </div>
-     
-
-      <div class="lungs">
-        <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
-
-        <div class="lungs-review">
-          <h1>
-            God, I wish it was 2013.
-          </h1>
-          <div class="music-ranks">
-            1. 400 Lux<br>
-            2. Tennis Court<br>
-            3. Ribs<br>
-            4. Team<br>
-            5. World Alone<br>
-            6. Glory and Gore<br>
-            7. Royals<br>
-            8. Buzzcut Season<br>
+        <div class="album">
+          <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
+          <div class="review">
+            <h1>
+              Me, if I was a woodland fairy:
+            </h1>
+              1. Rabbit Heart (Raise it Up)<br>
+              2. Hurricane Drunk<br>
+              3. Dog Days Are Over<br>
+              4. Cosmic Love<br>
+              5. Girl with One Eye<br>
+              6. Drumming Song<br>
+              7. You've Got the Love<br>
+              8. Howl<br>
+              9. Blinding<br>
+              10.Between Two Lungs
+            <h1>
+              Skips:
+            </h1>
+            I'm not Calling You a Liar<br>
+            Kiss with a Fist<br>
+            My Boy Builds Coffins
           </div>
-          <h1>
-            Skips:
-          </h1>
-          Still Sane<br>
-          White Teeth Teens
         </div>
-      </div>
-         </div>
+     
     </div>
 
 
@@ -209,5 +179,35 @@
     <div class="books-container">
       <img class="books" src="https://books.google.com/books/publisher/content?id=1lamEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0fYB-elSPHgs7wknZY2053-WYv-w&w=1280" alt="description of image">
     </div>
+
+    <script>
+      const album = document.querySelectorAll('.album');
+
+
+album.forEach((element, index) => {
+  element.addEventListener('mouseover', () => {
+    
+    album.forEach((el) => {
+      el.classList.remove('blur');
+    });
+
+    album.forEach((el, i) => {
+      if (i !== index) {
+        el.classList.add('blur');
+      }
+    });
+
+    for (let i = index + 1; i < album.length; i++) {
+      album[i].classList.add('shift');
+    }
+  });
+
+  element.addEventListener('mouseout', () => {
+    album.forEach((el) => {
+      el.classList.remove('blur', 'shift');
+    });
+  });
+});
+    </script>
   </body>
 </html>
