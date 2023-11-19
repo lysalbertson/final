@@ -18,13 +18,13 @@
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
       padding-top: 3vh;
-
+      overflow-x: scroll;
+      overflow-y: hidden;
     }
-
-/*     .pure-heroine {
-      position: relative;
-      display: inline-block
-    } */
+    .album-container::-webkit-scrollbar{
+      display: none
+      
+    }
 
     .review {
       display: none;
@@ -42,27 +42,25 @@
       width: 200px;
     }
 
-
-/*     .tina-snow, */
     .album {
       position: relative;
       transition: transform .7s ease;
       display: inline-block;
     }
 
-   .blur {
-  filter: blur(3px); 
-}
+    .blur {
+      filter: blur(3px);
+    }
 
-.shift {
-  transform: translateX(210px); 
-}
+    .shift {
+      transform: translateX(210px);
+    }
 
     .album:hover .review {
       display: block
     }
 
-/*   .tina-snow:hover+.lungs {
+    /*   .tina-snow:hover+.lungs {
       transform: translateX(210px);
       filter: blur(3px)
     } 
@@ -102,74 +100,74 @@
   <body>
 
     <div class="album-container">
-        <div class="album">
-          <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
+      <div class="album">
+        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
 
-          <div class="review">
-            <h1>
-              God, I wish it was 2013.
-            </h1>
-              1. 400 Lux<br>
-              2. Tennis Court<br>
-              3. Ribs<br>
-              4. Team<br>
-              5. World Alone<br>
-              6. Glory and Gore<br>
-              7. Royals<br>
-              8. Buzzcut Season<br>
-            <h1>
-              Skips:
-            </h1>
-            Still Sane<br>
-            White Teeth Teens
-          </div>
+        <div class="review">
+          <h1>
+            God, I wish it was 2013.
+          </h1>
+          1. 400 Lux<br>
+          2. Tennis Court<br>
+          3. Ribs<br>
+          4. Team<br>
+          5. World Alone<br>
+          6. Glory and Gore<br>
+          7. Royals<br>
+          8. Buzzcut Season<br>
+          <h1>
+            Skips:
+          </h1>
+          Still Sane<br>
+          White Teeth Teens
         </div>
-        <div class="album">
-          <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
-          <div class="review">
-            <h1>
-              I would die for Megan thee Stallion
-            </h1>
-              1. Hot Girl<br>
-              2. Big Ole Freak<br>
-              3. Freak Nasty<br>
-              4. Good At<br>
-              5. Cognac Queen<br>
-              6. Neva<br>
-              7. Tina Montana<br>
-              8. Cocky Af<br>
-              9. Make a Bag<br>
-            <h1>
-              Skips:
-            </h1>
-            WTF I Want
-          </div>
+      </div>
+      <div class="album">
+        <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
+        <div class="review">
+          <h1>
+            I would die for Megan thee Stallion
+          </h1>
+          1. Hot Girl<br>
+          2. Big Ole Freak<br>
+          3. Freak Nasty<br>
+          4. Good At<br>
+          5. Cognac Queen<br>
+          6. Neva<br>
+          7. Tina Montana<br>
+          8. Cocky Af<br>
+          9. Make a Bag<br>
+          <h1>
+            Skips:
+          </h1>
+          WTF I Want
         </div>
-        <div class="album">
-          <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
-          <div class="review">
-            <h1>
-              Me, if I was a woodland fairy:
-            </h1>
-              1. Rabbit Heart (Raise it Up)<br>
-              2. Hurricane Drunk<br>
-              3. Dog Days Are Over<br>
-              4. Cosmic Love<br>
-              5. Girl with One Eye<br>
-              6. Drumming Song<br>
-              7. You've Got the Love<br>
-              8. Howl<br>
-              9. Blinding<br>
-              10.Between Two Lungs
-            <h1>
-              Skips:
-            </h1>
-            I'm not Calling You a Liar<br>
-            Kiss with a Fist<br>
-            My Boy Builds Coffins
-          </div>
+      </div>
+      <div class="album">
+        <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
+        <div class="review">
+          <h1>
+            Me, if I was a woodland fairy:
+          </h1>
+          1. Rabbit Heart (Raise it Up)<br>
+          2. Hurricane Drunk<br>
+          3. Dog Days Are Over<br>
+          4. Cosmic Love<br>
+          5. Girl with One Eye<br>
+          6. Drumming Song<br>
+          7. You've Got the Love<br>
+          8. Howl<br>
+          9. Blinding<br>
+          10.Between Two Lungs
+          <h1>
+            Skips:
+          </h1>
+          I'm not Calling You a Liar<br>
+          Kiss with a Fist<br>
+          My Boy Builds Coffins
         </div>
-     
+      </div>
+
     </div>
 
 
@@ -184,30 +182,30 @@
       const album = document.querySelectorAll('.album');
 
 
-album.forEach((element, index) => {
-  element.addEventListener('mouseover', () => {
-    
-    album.forEach((el) => {
-      el.classList.remove('blur');
-    });
+      album.forEach((element, index) => {
+        element.addEventListener('mouseover', () => {
 
-    album.forEach((el, i) => {
-      if (i !== index) {
-        el.classList.add('blur');
-      }
-    });
+          album.forEach((el) => {
+            el.classList.remove('blur');
+          });
 
-    for (let i = index + 1; i < album.length; i++) {
-      album[i].classList.add('shift');
-    }
-  });
+          album.forEach((el, i) => {
+            if (i !== index) {
+              el.classList.add('blur');
+            }
+          });
 
-  element.addEventListener('mouseout', () => {
-    album.forEach((el) => {
-      el.classList.remove('blur', 'shift');
-    });
-  });
-});
+          for (let i = index + 1; i < album.length; i++) {
+            album[i].classList.add('shift');
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          album.forEach((el) => {
+            el.classList.remove('blur', 'shift');
+          });
+        });
+      });
     </script>
   </body>
 </html>
