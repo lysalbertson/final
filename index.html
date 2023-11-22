@@ -31,7 +31,6 @@
       font-family: "title";
       font-size: 50px;
       position: sticky;
-      
     }
 
     @font-face {
@@ -44,7 +43,7 @@
       src: url("Montserrat-VariableFont_wght[1].ttf")
     }
 
-    .review {
+    .music-review {
       display: none;
       font-size: 12px;
       width: 250px;
@@ -64,7 +63,6 @@
       position: relative;
       transition: transform .7s ease;
       display: inline-block;
-      max-height: 250px;
     }
 
     .blur {
@@ -75,7 +73,7 @@
       transform: translateX(260px);
     }
 
-    .album:hover .review {
+    .album:hover .music-review {
       display: block
     }
 
@@ -113,10 +111,29 @@
       display: none
     }
 
-    .movies-tv {
+    .movies-img {
       height: 250px;
       width: 170px; 
 
+    }
+    .movie {
+      position: relative;
+      transition: transform .7s ease;
+      display: inline-block;
+    }
+    .movie-review{
+       display: none;
+      font-size: 12px;
+      width: 180px;
+      height: 250px;
+      text-align: left;
+      position: absolute;
+      left: calc(100% + 1vw);
+      top: 0;
+      
+    }
+    .movie:hover .movie-review {
+      display: block
     }
 
     .books-container {
@@ -142,7 +159,7 @@
     <div class="album-container">
       <div class="album">
         <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Pure Heroine
           </div>
@@ -167,7 +184,7 @@
       <div class="album">
 
         <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="Megan thee Stallion's album 'Tina Snow' album art">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Tina Snow
           </div>
@@ -191,7 +208,7 @@
       </div>
       <div class="album">
         <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="album cover for Florence and the Machine's album 'Lungs'">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Lungs
           </div>
@@ -218,7 +235,7 @@
       </div>
       <div class="album">
         <img class="music-img" src="Beyoncé-Beyoncé.png" alt="Beyonce's self titled album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Beyonce
           </div>
@@ -247,7 +264,7 @@
       </div>
       <div class="album">
         <img class="music-img" src="Rihanna-Anti.png" alt="Anti by Rihanna album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Anti (Deluxe)
           </div>
@@ -278,7 +295,7 @@
       </div>
       <div class="album">
         <img class="music-img" src="Mac_Miller-The_Divine_Feminine.png" alt="The Divine Feminine by Mac Miller album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             The Divine Feminine
           </div>
@@ -303,7 +320,7 @@
       </div>
 <div class="album">
         <img class="music-img" src="Nicki_Minaj-The_Pinkprint.png" alt="The Pinkprint by Nicki Minaj album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             The Pinkprint
           </div>
@@ -334,7 +351,7 @@
       </div>
 <div class="album">
         <img class="music-img" src="Olivia_Rodrigo-Guts.png" alt="GUTS by Olivia Rodrigo album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             GUTS
           </div>
@@ -360,7 +377,7 @@
       </div>
 <div class="album">
         <img class="music-img" src="Hozier-Unreal_Unearth.png" alt="Unreal Unearth by Hozier album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Unreal Unearth
           </div>
@@ -390,7 +407,7 @@
       </div>
  <div class="album">
         <img class="music-img" src="ChloeHalle-Sugar-Symphony.jpg" alt="Sugar Symphony by Chloe X Halle album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Sugar Symphony
           </div>
@@ -410,7 +427,7 @@
       </div>
       <div class="album">
         <img class="music-img" src="Sabrina_Carpenter-Emails_I_Can't_Send.png" alt="Emails I Can't Send by Sabrina Carpenter album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             emails i can't send
           </div>
@@ -437,7 +454,7 @@
       </div>
 <div class="album">
         <img class="music-img" src="Midnights-Taylor_Swift.png" alt="Midnights by Taylor Swift album cover">
-        <div class="review">
+        <div class="music-review">
           <div class="title">
             Midnights
           </div>
@@ -467,12 +484,61 @@
     </div>
 <div class="mains"> TV Shows and Movies </div>
     <div class="movies-tv-container">
-      <img class="movies-tv" src="https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg" alt="Lady Bird Poster">
-    <img class="movies-tv" src="glow-up.jpg" alt="description of image">
-     <img class="movies-tv" src="jjk.jpg" alt="description of image">
-     <img class="movies-tv" src="matilda.jpg" alt="description of image">
-    <img class="movies-tv" src="the-meg.jpg" alt="description of image"> 
+      <div class="movie">
+      <img class="movies-img" src="Lady-Bird.jpeg" alt="Lady Bird Poster">
+      <div class="movie-review">
+        i'm writing stuff here
+        </div>
+        </div>
+    <img class="movies-img" src="glow-up.jpg" alt="description of image">
+     <img class="movies-img" src="jjk.jpg" alt="description of image">
+     <img class="movies-img" src="matilda.jpg" alt="description of image">
+    <img class="movies-img" src="the-meg.jpg" alt="description of image"> 
+       <img class="movies-img" src="the-meg-2.jpg" alt="description of image"> 
     </div>
+    
+     <div class="album">
+        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'">
+        <div class="review">
+          <div class="title">
+            Pure Heroine
+          </div>
+          <div class="sentence">
+            God, I wish it was 2013.
+          </div>
+          <div class="rankings">
+            1. 400 Lux<br>
+            2. Tennis Court<br>
+            3. Ribs<br>
+            4. Team<br>
+            5. World Alone<br>
+            6. Glory and Gore<br>
+            7. Royals<br>
+            8. Buzzcut Season<br>
+            <b>Skips:</b><br>
+            Still Sane<br>
+            White Teeth Teens
+          </div>
+        </div>
+      </div>
+      <div class="album">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="books-container">
       <img class="books" src="https://books.google.com/books/publisher/content?id=1lamEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0fYB-elSPHgs7wknZY2053-WYv-w&w=1280" alt="description of image">
     </div>
