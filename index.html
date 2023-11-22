@@ -19,26 +19,34 @@
       padding-bottom: 3vh;
       padding-top: 3vh;
       overflow-x: scroll;
-    
+
     }
-    .album-container::-webkit-scrollbar{
+
+    .album-container::-webkit-scrollbar {
       display: none
     }
-    .mains{
+
+    .mains {
       color: White;
       font-family: "title";
       font-size: 50px
     }
+
     @font-face {
       font-family: "title";
       src: url("Barrio-Regular.ttf");
     }
 
+    @font-face {
+      font-family: "Montserrat";
+      src: url("Montserrat-VariableFont_wght[1].ttf")
+    }
+
     .review {
       display: none;
       font-size: 12px;
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       text-align: left;
       position: absolute;
       left: calc(100% + 1vw);
@@ -46,14 +54,18 @@
     }
 
     .music-img {
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
     }
 
     .album {
       position: relative;
       transition: transform .7s ease;
       display: inline-block;
+      max-height: 250px;
+      
+      
+
     }
 
     .blur {
@@ -61,14 +73,32 @@
     }
 
     .shift {
-      transform: translateX(210px);
+      transform: translateX(260px);
     }
 
     .album:hover .review {
       display: block
     }
 
+    .title {
+      font-family: "title";
+      text-align: center;
+      border-bottom: dotted black 2px;
+      font-size: 36px
+    }
 
+    .sentence {
+      font-family: "Montserrat";
+      text-align: center;
+      font-size: 18px
+    }
+
+    .rankings {
+      font-family: "Montserrat";
+      text-align: center;
+  
+       
+    }
 
     .movies-tv-container {
       border-bottom: black 3px solid;
@@ -97,72 +127,81 @@
   <body>
 
     <div class="album-container">
-         <div class="mains">Music</div>
+      <div class="mains">Music</div>
       <div class="album">
         <img class="music-img" src="Lorde_Pure_Heroine.png" alt="description of image">
         <div class="review">
-          <h1>
+          <div class="title">
+            Pure Heroine
+          </div>
+          <div class="sentence">
             God, I wish it was 2013.
-          </h1>
-          1. 400 Lux<br>
-          2. Tennis Court<br>
-          3. Ribs<br>
-          4. Team<br>
-          5. World Alone<br>
-          6. Glory and Gore<br>
-          7. Royals<br>
-          8. Buzzcut Season<br>
-          <h1>
-            Skips:
-          </h1>
-          Still Sane<br>
-          White Teeth Teens
+          </div>
+          <div class="rankings">
+            1. 400 Lux<br>
+            2. Tennis Court<br>
+            3. Ribs<br>
+            4. Team<br>
+            5. World Alone<br>
+            6. Glory and Gore<br>
+            7. Royals<br>
+            8. Buzzcut Season<br>
+            <b>Skips:</b><br>
+            Still Sane<br>
+            White Teeth Teens
+          </div>
         </div>
       </div>
       <div class="album">
-     
+
         <img class="music-img" src="Megan_Thee_Stallion_Tina_Snow.png" alt="description of image">
         <div class="review">
-          <h1>
+          <div class="title">
+            Tina Snow
+          </div>
+          <div class="sentence">
             I would die for Megan thee Stallion
-          </h1>
-          1. Hot Girl<br>
-          2. Big Ole Freak<br>
-          3. Freak Nasty<br>
-          4. Good At<br>
-          5. Cognac Queen<br>
-          6. Neva<br>
-          7. Tina Montana<br>
-          8. Cocky Af<br>
-          9. Make a Bag<br>
-          <h1>
-            Skips:
-          </h1>
-          WTF I Want
+          </div>
+          <div class="rankings">
+            1. Hot Girl<br>
+            2. Big Ole Freak<br>
+            3. Freak Nasty<br>
+            4. Good At<br>
+            5. Cognac Queen<br>
+            6. Neva<br>
+            7. Tina Montana<br>
+            8. Cocky Af<br>
+            9. Make a Bag<br>
+            <b>Skips:</b><br>
+            WTF I Want
+          </div>
         </div>
       </div>
       <div class="album">
         <img class="music-img" src="Florence_and_the_Machine_Lungs.png" alt="description of image">
         <div class="review">
-          <h1>
+          <div class="title">
+            Lungs
+          </div>
+          <div class="sentence">
             Me, if I was a woodland fairy:
-          </h1>
-          1. Rabbit Heart (Raise it Up)<br>
-          2. Hurricane Drunk<br>
-          3. Dog Days Are Over<br>
-          4. Cosmic Love<br>
-          5. Girl with One Eye<br>
-          6. Drumming Song<br>
-          7. You've Got the Love<br>
-          8. Howl<br>
-          9. Blinding<br>
-          10.Between Two Lungs
-          <h1>
-            Skips:
-          </h1>
-          I'm not Calling You a Liar<br>
-          Kiss with a Fist<br>
-          My Boy Builds Coffins
+          </div>
+          <div class="rankings">
+            1. Rabbit Heart (Raise it Up)<br>
+            2. Hurricane Drunk<br>
+            3. Dog Days Are Over<br>
+            4. Cosmic Love<br>
+            5. Girl with One Eye<br>
+            6. Drumming Song<br>
+            7. You've Got the Love<br>
+            8. Howl<br>
+            9. Blinding<br>
+            10.Between Two Lungs<br>
+            <b>Skips: </b><br>
+            I'm not Calling You a Liar<br>
+            Kiss with a Fist<br>
+            My Boy Builds Coffins
+          </div>
         </div>
       </div>
 
@@ -183,15 +222,15 @@
       album.forEach((element, index) => {
         element.addEventListener('mouseover', () => {
 
-          album.forEach((el) => {
-            el.classList.remove('blur');
-          });
+          //           album.forEach((el) => {
+          //             el.classList.remove('blur');
+          //           });
 
-          album.forEach((el, i) => {
-            if (i !== index) {
-              el.classList.add('blur');
-            }
-          });
+          //           album.forEach((el, i) => {
+          //             if (i !== index) {
+          //               el.classList.add('blur');
+          //             }
+          //           });
 
           for (let i = index + 1; i < album.length; i++) {
             album[i].classList.add('shift');
