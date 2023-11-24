@@ -155,10 +155,35 @@
     .books-container::-webkit-scrollbar {
       display: none
     }
+ .book-img {
+      height: 250px;
+      width: 170px;
 
-    .books {
-      height: 200px;
-      width: 150px;
+    }
+
+    .book {
+      position: relative;
+      transition: transform .7s ease;
+      display: inline-block;
+    }
+
+    .book-review {
+      display: none;
+      font-size: 12px;
+      width: 180px;
+      height: 250px;
+      text-align: left;
+      position: absolute;
+      left: calc(100% + 1vw);
+      top: 0;
+
+    }
+
+    .book:hover .book-review {
+      display: block
+    }
+
+   
 
     }
   </style>
@@ -514,13 +539,14 @@
              How I watched: On my laptop in my bed (my arm fell asleep)</b>
         </div>
         </div>
+        </div>
 <!--     ADD INTERVIEW W A VAMPIRE     -->
         
         
         
         
         
-      </div>
+      
       <div class="movie">
         <img class="movies-img" src="glow-up.jpg" alt="description of image">
           <div class="movie-review">
@@ -813,16 +839,55 @@
       </div>
       
     </div>
-
-
-
-      <div class="books-container">
-        <img class="books" src="https://books.google.com/books/publisher/content?id=1lamEAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U0fYB-elSPHgs7wknZY2053-WYv-w&w=1280" alt="description of image">
+   
+      
+          <div class="book">
+        <img class="book-img" src="throne-of-the-fallen.png" alt="description of image">
+          <div class="book-review">
+          <div class="title">
+          Throne of the Fallen
+        </div>
+          <div class="sentence">
+            I binged this in three days, need I say more?<br><br>
+          </div>
+           <div class="rankings">
+         <b>10/10</b><br>
+        This was my first real anime, and what a way to kick it off. I watched this <i>and</i> read the manga. I have absoultely no regrets
+             <br>
+            <br>
+            <b> 
+             How I watched: Crunchy Roll in my childhood home</b>
+        </div>
+        </div>
       </div>
+     
+      <div class="book">
+        <img class="book-img" src="fall-of-wrath-and-ruin.jpg" alt="description of image">
+          <div class="book-review">
+          <div class="title">
+          Fall of Ruin and Wrath
+        </div>
+          <div class="sentence">
+            I binged this in three days, need I say more?<br><br>
+          </div>
+           <div class="rankings">
+         <b>10/10</b><br>
+        This was my first real anime, and what a way to kick it off. I watched this <i>and</i> read the manga. I have absoultely no regrets
+             <br>
+            <br>
+            <b> 
+             How I watched: Crunchy Roll in my childhood home</b>
+        </div>
+        </div>
+      </div>
+
+
+    
 
       <script>
         const album = document.querySelectorAll('.album');
         const movie = document.querySelectorAll('.movie');
+        const book = document.querySelectorAll('.book')
 
         album.forEach((element, index) => {
           element.addEventListener('mouseover', () => {
@@ -853,6 +918,25 @@
             });
           });
         });
+        
+           book.forEach((element, index) => {
+          element.addEventListener('mouseover', () => {
+
+            for (let i = index + 1; i < book.length; i++) {
+              book[i].classList.add('shift-movie');
+            }
+          });
+
+          element.addEventListener('mouseout', () => {
+            book.forEach((el) => {
+              el.classList.remove('shift-movie');
+            });
+          });
+        });
+        
+        
+        
+        
         //           album.forEach((el) => {
         //             el.classList.remove('blur');
         //           });
