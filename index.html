@@ -24,6 +24,7 @@
       font-family: "title";
       font-size: 50px;
       position: sticky;
+  
     }
 
     .title {
@@ -76,12 +77,13 @@
       left: calc(100% + 1vw);
       top: 0;
       overflow-y: scroll; 
+     
     }
     .music-review.show{
       display: block
     }
-    .music-review:webkit-scrollbar {
-      display: none
+    .music-review::-webkit-scrollbar {
+     display: none
     }
 
     .music-img {
@@ -192,6 +194,7 @@
     }
   </style>
   <body>
+    
     <div class="mains"> Music </div>
     <div class="album-container">
         
@@ -549,6 +552,27 @@
     </div>
     <div class="mains"> TV Shows and Movies </div>
     <div class="movies-tv-container">
+      
+      <div class="movie">
+        <img class="movies-img" src="blue-eye-samurai.jpg" alt="Lady Bird Poster">
+        <div class="movie-review">
+          <div class="title">
+            Blue Eye Samurai
+          </div>
+          <div class="sentence">
+            Sorta queer, really beautiful, a good watch<br><br>
+          </div>
+          <div class="rankings">
+            <b>8/10</b><br>
+            It was alright...not as poignant as I thought it might be. I feel like this is a lot of white women's favorite movie, and I'm glad for them.
+            <br>
+            <br>
+            <b> dir. Greta Gerwig<br>
+              How I watched: On my laptop in my bed (my arm fell asleep)</b>
+          </div>
+        </div>
+      </div>
+      
       <div class="movie">
         <img class="movies-img" src="Lady-Bird.jpeg" alt="Lady Bird Poster">
         <div class="movie-review">
