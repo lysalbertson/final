@@ -9,9 +9,43 @@
       background-color: pink
     }
 
-    h1 {
+    @font-face {
+      font-family: "title";
+      src: url("Barrio-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: "Montserrat";
+      src: url("Montserrat-VariableFont_wght[1].ttf")
+    }
+
+    .mains {
+      color: white;
+      font-family: "title";
+      font-size: 50px;
+      position: sticky;
+    }
+
+    .title {
+      font-family: "title";
+      text-align: center;
+      border-bottom: dotted black 2px;
+      font-size: 26px;
+      text-wrap: wrap
+    }
+
+    .sentence {
+      font-family: "Montserrat";
+      text-align: center;
       font-size: 14px;
-      text-align: center
+      text-wrap: wrap;
+      font-weight: bold
+    }
+
+    .rankings {
+      font-family: "Montserrat";
+      text-align: center;
+      text-wrap: wrap
     }
 
     .album-container {
@@ -26,21 +60,10 @@
       display: none
     }
 
-    .mains {
-      color: white;
-      font-family: "title";
-      font-size: 50px;
-      position: sticky;
-    }
-
-    @font-face {
-      font-family: "title";
-      src: url("Barrio-Regular.ttf");
-    }
-
-    @font-face {
-      font-family: "Montserrat";
-      src: url("Montserrat-VariableFont_wght[1].ttf")
+    .album {
+      position: relative;
+      transition: transform .7s ease;
+      display: inline-block;
     }
 
     .music-review {
@@ -59,52 +82,15 @@
       width: 250px;
     }
 
-    .album {
-      position: relative;
-      transition: transform .7s ease;
-      display: inline-block;
-    }
-
-    .blur {
-      filter: blur(3px);
+    .album:hover .music-review {
+      display: block
     }
 
     .shift-album {
       transform: translateX(280px);
     }
 
-    .shift-movie {
-      transform: translateX(200px);
-    }
 
-    .album:hover .music-review {
-      display: block
-    }
-
-    .title {
-      font-family: "title";
-      text-align: center;
-      border-bottom: dotted black 2px;
-      font-size: 26px;
-      text-wrap: wrap
-    }
-
-    .sentence {
-      font-family: "Montserrat";
-      text-align: center;
-      font-size: 14px;
-      text-wrap: wrap;
-      font-weight: bold
-      
-    }
-
-    .rankings {
-      font-family: "Montserrat";
-      text-align: center;
-      text-wrap: wrap
-
-
-    }
 
     .movies-tv-container {
       border-bottom: black 3px solid;
@@ -118,16 +104,16 @@
       display: none
     }
 
-    .movies-img {
-      height: 250px;
-      width: 170px;
-
-    }
-
     .movie {
       position: relative;
       transition: transform .7s ease;
       display: inline-block;
+    }
+
+    .movies-img {
+      height: 250px;
+      width: 170px;
+
     }
 
     .movie-review {
@@ -146,6 +132,10 @@
       display: block
     }
 
+    .shift-movie {
+      transform: translateX(200px);
+    }
+
     .book-container {
       border-bottom: black 3px solid;
       padding-bottom: 3vh;
@@ -154,13 +144,9 @@
       white-space: nowrap
     }
 
+
     .book-container::-webkit-scrollbar {
       display: none
-    }
- .book-img {
-      height: 250px;
-      width: 170px;
-
     }
 
     .book {
@@ -168,6 +154,12 @@
       transition: transform .7s ease;
       display: inline-block;
     }
+
+    .book-img {
+      height: 250px;
+      width: 170px;
+    }
+
 
     .book-review {
       display: none;
@@ -184,10 +176,6 @@
     .book:hover .book-review {
       display: block
     }
-
-   
-
-    
   </style>
   <body>
     <div class="mains"> Music </div>
@@ -514,14 +502,14 @@
           </div>
         </div>
       </div>
-       <div class="album">
+      <div class="album">
         <img class="music-img" src="Beyonce-Lemonade.png" alt="Lemonade by Beyonce album cover">
         <div class="music-review">
           <div class="title">
-           Lemonade
+            Lemonade
           </div>
           <div class="sentence">
-           Beyonce's best, and the best album of all time.
+            Beyonce's best, and the best album of all time.
           </div>
           <div class="rankings">
             1. All Night<br>
@@ -541,8 +529,8 @@
           </div>
         </div>
       </div>
-      
-    
+
+
     </div>
     <div class="mains"> TV Shows and Movies </div>
     <div class="movies-tv-container">
@@ -550,714 +538,714 @@
         <img class="movies-img" src="Lady-Bird.jpeg" alt="Lady Bird Poster">
         <div class="movie-review">
           <div class="title">
-          Lady Bird
-        </div>
+            Lady Bird
+          </div>
           <div class="sentence">
             I miss my mom.<br><br>
           </div>
-           <div class="rankings">
-         <b>7/10</b><br>
-        It was alright...not as poignant as I thought it might be. I feel like this is a lot of white women's favorite movie, and I'm glad for them.
-             <br>
+          <div class="rankings">
+            <b>7/10</b><br>
+            It was alright...not as poignant as I thought it might be. I feel like this is a lot of white women's favorite movie, and I'm glad for them.
+            <br>
             <br>
             <b> dir. Greta Gerwig<br>
-             How I watched: On my laptop in my bed (my arm fell asleep)</b>
+              How I watched: On my laptop in my bed (my arm fell asleep)</b>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
 
-        <div class="movie">
+      <div class="movie">
         <img class="movies-img" src="interview-with-the-vampire.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Interview with the Vampire
-        </div>
+            Interview with the Vampire
+          </div>
           <div class="sentence">
             Gay vampires in 1920s New Orleans, it's gonna be good.<br><br>
           </div>
-           <div class="rankings">
-         <b>9/10</b><br>
-       I'm really excited for season two! This was so toxic, but in a very entertaining way, I'm intrigued to say the least.
-             <br>
+          <div class="rankings">
+            <b>9/10</b><br>
+            I'm really excited for season two! This was so toxic, but in a very entertaining way, I'm intrigued to say the least.
             <br>
-            <b> 
-             How I watched: Over the course of a week, before the quarter got busy</b>
+            <br>
+            <b>
+              How I watched: Over the course of a week, before the quarter got busy</b>
+          </div>
         </div>
-        </div>
-        
+
       </div>
       <div class="movie">
         <img class="movies-img" src="glow-up.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Glow Up
-        </div>
+            Glow Up
+          </div>
           <div class="sentence">
             I don't know why I like this so much...but I do<br><br>
           </div>
-           <div class="rankings">
-         <b>9/10</b><br>
-        I'm not even that in to reality TV anymore, but when a new Glow Up season drops, I'm sat. And I get embarassingly emotional too--like, girl, it's make up.
-             <br>
+          <div class="rankings">
+            <b>9/10</b><br>
+            I'm not even that in to reality TV anymore, but when a new Glow Up season drops, I'm sat. And I get embarassingly emotional too--like, girl, it's make up.
             <br>
-            <b> 
-             How I watched: During meals over the course of a month</b>
+            <br>
+            <b>
+              How I watched: During meals over the course of a month</b>
+          </div>
         </div>
-        </div>
-        
+
       </div>
-       <div class="movie">
+      <div class="movie">
         <img class="movies-img" src="matilda.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Matilda
-        </div>
+            Matilda
+          </div>
           <div class="sentence">
             Possibly the best movie of all time<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-        I watched this on a plane ride and the lengths I had to go to keep from crying in public. Such a beautiful movie--Danny Devito at his best fr.
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            I watched this on a plane ride and the lengths I had to go to keep from crying in public. Such a beautiful movie--Danny Devito at his best fr.
+            <br>
             <br>
             <b> dir. Danny Devito<br>
-             How I watched: On a plane</b>
-        </div>
+              How I watched: On a plane</b>
+          </div>
         </div>
       </div>
       <div class="movie">
         <img class="movies-img" src="jjk.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Jujutsu Kaisen
-        </div>
+            Jujutsu Kaisen
+          </div>
           <div class="sentence">
             I binged this in three days, need I say more?<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-        This was my first real anime, and what a way to kick it off. I watched this <i>and</i> read the manga. I have absoultely no regrets
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            This was my first real anime, and what a way to kick it off. I watched this <i>and</i> read the manga. I have absoultely no regrets
             <br>
-            <b> 
-             How I watched: Crunchy Roll in my childhood home</b>
-        </div>
+            <br>
+            <b>
+              How I watched: Crunchy Roll in my childhood home</b>
+          </div>
         </div>
       </div>
-     <div class="movie">
+      <div class="movie">
         <img class="movies-img" src="the-meg-2.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Meg 2: The Trench
-        </div>
+            Meg 2: The Trench
+          </div>
           <div class="sentence">
             See "The Meg"<br><br>
           </div>
-           <div class="rankings">
-         <b>8/10</b><br>
-       This one loses half a point because the plot was so weird? It was Jason v. Shark <i>and</i> the Government <i>and</i> a Mexican...crew?
-             <br>
+          <div class="rankings">
+            <b>8/10</b><br>
+            This one loses half a point because the plot was so weird? It was Jason v. Shark <i>and</i> the Government <i>and</i> a Mexican...crew?
+            <br>
             <br>
             <b> dir.Ben Wheatley<br>
-             How I watched: On my childhood living room TV</b>
-        </div>
+              How I watched: On my childhood living room TV</b>
+          </div>
         </div>
       </div>
       <div class="movie">
         <img class="movies-img" src="the-meg.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          The Meg
-        </div>
+            The Meg
+          </div>
           <div class="sentence">
             Cheesy, but enjoyable<br><br>
           </div>
-           <div class="rankings">
-         <b>8.5/10</b><br>
-        I watched this with my mom, who loves Jason Statham, and had a grand ole time making fun of how cheesy it was. For the mems alone, it gets a good rating
-             <br>
+          <div class="rankings">
+            <b>8.5/10</b><br>
+            I watched this with my mom, who loves Jason Statham, and had a grand ole time making fun of how cheesy it was. For the mems alone, it gets a good rating
+            <br>
             <br>
             <b> dir. Jon Turteltaub<br>
-             How I watched: On my childhood living room TV</b>
-        </div>
+              How I watched: On my childhood living room TV</b>
+          </div>
         </div>
       </div>
-      
+
       <div class="movie">
         <img class="movies-img" src="the-heat.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-         The Heat
-        </div>
+            The Heat
+          </div>
           <div class="sentence">
             Now, this is well done copaganda!<br><br>
           </div>
-           <div class="rankings">
-         <b>8/10</b><br>
-       It wasn't as funny as I remember, but it was funny. Minus points for the copaganda (but at least it's funny!)
-             <br>
+          <div class="rankings">
+            <b>8/10</b><br>
+            It wasn't as funny as I remember, but it was funny. Minus points for the copaganda (but at least it's funny!)
+            <br>
             <br>
             <b> dir.Paul Feig<br>
-             How I watched: On my childhood living room TV</b>
-        </div>
+              How I watched: On my childhood living room TV</b>
+          </div>
         </div>
       </div>
-     
+
       <div class="movie">
         <img class="movies-img" src="shameless.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Shameless (up to season 4)
-        </div>
+            Shameless (up to season 4)
+          </div>
           <div class="sentence">
             Good until it wasn't<br><br>
           </div>
-           <div class="rankings">
-         <b>7/10</b><br>
-       I loved this show until it got old. Like we get it Frank is an awful dad, give me <i>something</i> else. My final straw was when it started to get like day time tv. 
-             <br>
+          <div class="rankings">
+            <b>7/10</b><br>
+            I loved this show until it got old. Like we get it Frank is an awful dad, give me <i>something</i> else. My final straw was when it started to get like day time tv.
             <br>
-            <b> 
-             How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
-        </div>
+            <br>
+            <b>
+              How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
+          </div>
         </div>
       </div>
       <div class="movie">
         <img class="movies-img" src="beef.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Beef
-        </div>
-          <div class="sentence">
-           Good! But had tough competition<br><br>
+            Beef
           </div>
-           <div class="rankings">
-         <b>9/10</b><br>
-       I watched this after I had watched Succession <i>and</i> The Bear. But it was still a good show! Just not as good as the others.
-             <br>
+          <div class="sentence">
+            Good! But had tough competition<br><br>
+          </div>
+          <div class="rankings">
+            <b>9/10</b><br>
+            I watched this after I had watched Succession <i>and</i> The Bear. But it was still a good show! Just not as good as the others.
+            <br>
             <br>
             <b>
-             How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
-        </div>
+              How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
+          </div>
         </div>
       </div>
-       <div class="movie">
+      <div class="movie">
         <img class="movies-img" src="the-bear.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvODgxZDkxYTMtZWVjNS00OTc4LWJiY2MtMWNhNmUzNTFhZGI1LmpwZw==" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          The Bear 
-        </div>
+            The Bear
+          </div>
           <div class="sentence">
             SydCarm 4 Lyfe <br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-        I watched both seasons back to back and it was just too good. The slow burn is slow burning, the side characters are all so fleshed out, just so good.
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            I watched both seasons back to back and it was just too good. The slow burn is slow burning, the side characters are all so fleshed out, just so good.
             <br>
-            <b> 
-             How I watched: During the height of a Chicago summer</b>
-        </div>
+            <br>
+            <b>
+              How I watched: During the height of a Chicago summer</b>
+          </div>
         </div>
       </div>
       <div class="movie">
         <img class="movies-img" src="succesion.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Succesion
-        </div>
+            Succesion
+          </div>
           <div class="sentence">
             A masterclass in dramaturgy<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-       After I finished this show, I watched an edit of Shiv and Roman on TikTok that made me sob. I mourned the loss of these characters like they were real. 
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            After I finished this show, I watched an edit of Shiv and Roman on TikTok that made me sob. I mourned the loss of these characters like they were real.
             <br>
-            <b> 
-             How I watched: Over the course of an intense weekend</b>
-        </div>
+            <br>
+            <b>
+              How I watched: Over the course of an intense weekend</b>
+          </div>
         </div>
       </div>
-      
-        <div class="movie">
+
+      <div class="movie">
         <img class="movies-img" src="little-mermaid.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          The Little Mermaid
-        </div>
+            The Little Mermaid
+          </div>
           <div class="sentence">
             I liked the songs<br><br>
           </div>
-           <div class="rankings">
-         <b>8/10</b><br>
-       It was good. I'm not a fan of The Little Mermaid in general but the soundtrack is killer.
-             <br>
+          <div class="rankings">
+            <b>8/10</b><br>
+            It was good. I'm not a fan of The Little Mermaid in general but the soundtrack is killer.
+            <br>
             <br>
             <b> dir. Rob Marshall<br>
-             How I watched: In a movie theater</b>
-        </div>
+              How I watched: In a movie theater</b>
+          </div>
         </div>
       </div>
-      
-        <div class="movie">
+
+      <div class="movie">
         <img class="movies-img" src="spiderman.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Spiderman: Across the Spiderverse
-        </div>
+            Spiderman: Across the Spiderverse
+          </div>
           <div class="sentence">
             The animation, omfg<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-      If you told me I would wish an almost 3 hour movie was <i>longer</i> I would laugh. But something's in this movie that changes the space time continuum.
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            If you told me I would wish an almost 3 hour movie was <i>longer</i> I would laugh. But something's in this movie that changes the space time continuum.
+            <br>
             <br>
             <b> dir. Peter Ramsey<br>
-             How I watched: In theaters, with my family</b>
-        </div>
+              How I watched: In theaters, with my family</b>
+          </div>
         </div>
       </div>
-      
-        <div class="movie">
+
+      <div class="movie">
         <img class="movies-img" src="super-mario-movie.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Super Mario Bros.
-        </div>
+            Super Mario Bros.
+          </div>
           <div class="sentence">
             Peaches, Peaches, Peaches<br><br>
           </div>
-           <div class="rankings">
-         <b>7/10</b><br>
-       It was good! Chris Pratt almost ruined it, but Jack Black saved it. Also I liked Bowser's character arc.
-             <br>
+          <div class="rankings">
+            <b>7/10</b><br>
+            It was good! Chris Pratt almost ruined it, but Jack Black saved it. Also I liked Bowser's character arc.
+            <br>
             <br>
             <b> dir. Aaron Horvath<br>
-             How I watched: In a theater, with a friend</b>
-        </div>
+              How I watched: In a theater, with a friend</b>
+          </div>
         </div>
       </div>
-      
+
       <div class="movie">
         <img class="movies-img" src="parasite.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Parasite
-        </div>
+            Parasite
+          </div>
           <div class="sentence">
             The rewatchability is insane<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-       This was maybe my fourth or fifth time watching this movie. It never gets old. I watch it on most plane rides.
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            This was maybe my fourth or fifth time watching this movie. It never gets old. I watch it on most plane rides.
+            <br>
             <br>
             <b> dir. Bong Joon-ho<br>
-             How I watched: On a plane</b>
-        </div>
+              How I watched: On a plane</b>
+          </div>
         </div>
       </div>
       <div class="movie">
         <img class="movies-img" src="puss-in-boots.jpg" alt="description of image">
-          <div class="movie-review">
+        <div class="movie-review">
           <div class="title">
-          Puss in Boots: The Last Wish
-        </div>
+            Puss in Boots: The Last Wish
+          </div>
           <div class="sentence">
             Shrek has only brought about good things in my life<br><br>
           </div>
-           <div class="rankings">
-         <b>10/10</b><br>
-       This was so beautiful. About death and life and found family, and dog with no name. Ugh, I feel honored to have seen it
-             <br>
+          <div class="rankings">
+            <b>10/10</b><br>
+            This was so beautiful. About death and life and found family, and dog with no name. Ugh, I feel honored to have seen it
+            <br>
             <br>
             <b> dir. Joel Crawford<br>
-             How I watched: With my brothers, at a movie theater</b>
-        </div>
+              How I watched: With my brothers, at a movie theater</b>
+          </div>
         </div>
       </div>
     </div>
-   
-    
-    
-    
-    
+
+
+
+
+
     <div class="mains"> Books </div>
     <div class="book-container">
-          <div class="book">
+      <div class="book">
         <img class="book-img" src="throne-of-the-fallen.png" alt="Cover for Throne of the Fallen by Kerri Maniscalco">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-          Throne of the Fallen
-        </div>
+            Throne of the Fallen
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-     
+
       <div class="book">
         <img class="book-img" src="fall-of-wrath-and-ruin.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-          Fall of Ruin and Wrath
-        </div>
+            Fall of Ruin and Wrath
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
 
- <div class="book">
+      <div class="book">
         <img class="book-img" src="the-poppy-war.png" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         The Poppy War
-        </div>
+            The Poppy War
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-    
-       <div class="book">
+
+      <div class="book">
         <img class="book-img" src="things-we-hide-from-the-light.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-          Things We Hide From the Light
-        </div>
+            Things We Hide From the Light
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-       <div class="book">
+
+      <div class="book">
         <img class="book-img" src="the-shape-of-water.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-          The Shape of Water
-        </div>
+            The Shape of Water
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
- <div class="book">
+
+      <div class="book">
         <img class="book-img" src="a-light-in-the-flame.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-          A Light in the Flame
-        </div>
+            A Light in the Flame
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
+
       <div class="book">
         <img class="book-img" src="sweet-evil.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         The Sweet Series
-        </div>
+            The Sweet Series
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-            <div class="book">
+
+      <div class="book">
         <img class="book-img" src="wold-willow-witch.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         Wolf, Willow, Witch
-        </div>
+            Wolf, Willow, Witch
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-        <div class="book">
+
+      <div class="book">
         <img class="book-img" src="once-upon-a-broken-heart.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         Once Upon a Broken Heart
-        </div>
+            Once Upon a Broken Heart
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-            <div class="book">
+
+      <div class="book">
         <img class="book-img" src="the-ashes-and-the-star-cursed-king.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         The Ashes and the Star-Cursed King
-        </div>
+            The Ashes and the Star-Cursed King
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-        <div class="book">
+
+      <div class="book">
         <img class="book-img" src="open-water.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-         Open Water
-        </div>
+            Open Water
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-        <div class="book">
+
+      <div class="book">
         <img class="book-img" src="parable-of-the-sower.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-        Parable of the Sower (Graphic Novel)
-        </div>
+            Parable of the Sower (Graphic Novel)
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-          <div class="book">
+
+      <div class="book">
         <img class="book-img" src="heart-haunt-havoc.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-        Heart, Haunt, Havoc
-        </div>
+            Heart, Haunt, Havoc
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-       <div class="book">
+
+      <div class="book">
         <img class="book-img" src="six-scorched-roses.png" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Sixed Scorched Roses
-        </div>
+            Sixed Scorched Roses
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-             <div class="book">
+
+      <div class="book">
         <img class="book-img" src="exodus-20-3.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Exodus 20:3
-        </div>
+            Exodus 20:3
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-            <div class="book">
+
+      <div class="book">
         <img class="book-img" src="mountain-made-of-glass.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Mountains Made of Glass
-        </div>
+            Mountains Made of Glass
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-        <div class="book">
+
+      <div class="book">
         <img class="book-img" src="pride-and-prejudice.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Pride and Prejudice
-        </div>
+            Pride and Prejudice
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
+
       <div class="book">
         <img class="book-img" src="percy-jackson.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Percy Jackson and the Olympians Series
-        </div>
+            Percy Jackson and the Olympians Series
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-          <div class="book">
+
+      <div class="book">
         <img class="book-img" src="get-a-life-chloe-brown.jpg" alt="description of image">
-          <div class="book-review">
+        <div class="book-review">
           <div class="title">
-       Get a Life, Chloe Brown
-        </div>
+            Get a Life, Chloe Brown
+          </div>
           <div class="sentence">
             sentence here<br><br>
           </div>
-           <div class="rankings">
-         <b>xx/10</b><br>
-       Read this if you like 
-        </div>
+          <div class="rankings">
+            <b>xx/10</b><br>
+            Read this if you like
+          </div>
         </div>
       </div>
-      
-      
-      
-      
-      
-      
-</div>
-      <script>
-        const album = document.querySelectorAll('.album');
-        const movie = document.querySelectorAll('.movie');
-        const book = document.querySelectorAll('.book')
 
-        album.forEach((element, index) => {
-          element.addEventListener('mouseover', () => {
 
-            for (let i = index + 1; i < album.length; i++) {
-              album[i].classList.add('shift-album');
-            }
-          });
 
-          element.addEventListener('mouseout', () => {
-            album.forEach((el) => {
-              el.classList.remove('shift-album');
-            });
+
+
+
+    </div>
+    <script>
+      const album = document.querySelectorAll('.album');
+      const movie = document.querySelectorAll('.movie');
+      const book = document.querySelectorAll('.book')
+
+      album.forEach((element, index) => {
+        element.addEventListener('mouseover', () => {
+
+          for (let i = index + 1; i < album.length; i++) {
+            album[i].classList.add('shift-album');
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          album.forEach((el) => {
+            el.classList.remove('shift-album');
           });
         });
-        movie.forEach((element, index) => {
-          element.addEventListener('mouseover', () => {
+      });
+      movie.forEach((element, index) => {
+        element.addEventListener('mouseover', () => {
 
 
-            for (let i = index + 1; i < movie.length; i++) {
-              movie[i].classList.add('shift-movie');
-            }
-          });
+          for (let i = index + 1; i < movie.length; i++) {
+            movie[i].classList.add('shift-movie');
+          }
+        });
 
-          element.addEventListener('mouseout', () => {
-            movie.forEach((el) => {
-              el.classList.remove('shift-movie');
-            });
+        element.addEventListener('mouseout', () => {
+          movie.forEach((el) => {
+            el.classList.remove('shift-movie');
           });
         });
-        
-           book.forEach((element, index) => {
-          element.addEventListener('mouseover', () => {
+      });
 
-            for (let i = index + 1; i < book.length; i++) {
-              book[i].classList.add('shift-movie');
-            }
-          });
+      book.forEach((element, index) => {
+        element.addEventListener('mouseover', () => {
 
-          element.addEventListener('mouseout', () => {
-            book.forEach((el) => {
-              el.classList.remove('shift-movie');
-            });
+          for (let i = index + 1; i < book.length; i++) {
+            book[i].classList.add('shift-movie');
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          book.forEach((el) => {
+            el.classList.remove('shift-movie');
           });
         });
-        
-        
-        
-        
-        //           album.forEach((el) => {
-        //             el.classList.remove('blur');
-        //           });
+      });
 
-        //           album.forEach((el, i) => {
-        //             if (i !== index) {
-        //               el.classList.add('blur');
-        //             }
-        //           });
-      </script>
+
+
+
+      //           album.forEach((el) => {
+      //             el.classList.remove('blur');
+      //           });
+
+      //           album.forEach((el, i) => {
+      //             if (i !== index) {
+      //               el.classList.add('blur');
+      //             }
+      //           });
+    </script>
   </body>
 </html>
