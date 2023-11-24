@@ -75,16 +75,24 @@
       position: absolute;
       left: calc(100% + 1vw);
       top: 0;
+      overflow-y: scroll; 
+    }
+    .music-review.show{
+      display: block
+    }
+    .music-review:webkit-scrollbar {
+      display: none
     }
 
     .music-img {
       height: 250px;
       width: 250px;
     }
-
+    
     .album:hover .music-review {
       display: block
     }
+    
 
     .shift-album {
       transform: translateX(280px);
@@ -126,6 +134,9 @@
       left: calc(100% + 1vw);
       top: 0;
 
+    }
+    .movie-review.show{
+      display: block
     }
 
     .movie:hover .movie-review {
@@ -172,6 +183,9 @@
       top: 0;
 
     }
+    .book-review.show{
+      display: block
+    }
 
     .book:hover .book-review {
       display: block
@@ -180,9 +194,10 @@
   <body>
     <div class="mains"> Music </div>
     <div class="album-container">
-      <div class="album">
-        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'">
-        <div class="music-review">
+        
+      <div class="album" >
+        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'" >
+        <div class="music-review" >
           <div class="title">
             Pure Heroine
           </div>
@@ -1188,55 +1203,110 @@
       const album = document.querySelectorAll('.album');
       const movie = document.querySelectorAll('.movie');
       const book = document.querySelectorAll('.book')
+     
+album.forEach((element, index) => {
+  let isClicked = false; 
+  
+  element.addEventListener('mouseover', () => {
+    if (!isClicked) {
+      for (let i = index + 1; i < album.length; i++) {
+        album[i].classList.add('shift-album');
+      }
+    }
+  });
 
-      album.forEach((element, index) => {
-        element.addEventListener('mouseover', () => {
-
-          for (let i = index + 1; i < album.length; i++) {
-            album[i].classList.add('shift-album');
-          }
-        });
-
-        element.addEventListener('mouseout', () => {
-          album.forEach((el) => {
-            el.classList.remove('shift-album');
-          });
-        });
+  element.addEventListener('mouseout', () => {
+    if (!isClicked) {
+      album.forEach((el) => {
+        el.classList.remove('shift-album');
       });
-      movie.forEach((element, index) => {
-        element.addEventListener('mouseover', () => {
+    }
+  });
 
+  element.addEventListener('click', () => {
+    isClicked = !isClicked; 
+    for (let i = index + 1; i < album.length; i++) {
+      album[i].classList.toggle('shift-album', isClicked);
+    }
+  });
+});
 
-          for (let i = index + 1; i < movie.length; i++) {
-            movie[i].classList.add('shift-movie');
-          }
-        });
+album.forEach((element) => {
+  element.addEventListener('click', () => {
+    const musicReview = element.querySelector('.music-review');
+    musicReview.classList.toggle('show');
+  });
+});
+      
+      
+movie.forEach((element, index) => {
+  let isClicked = false; 
+  
+  element.addEventListener('mouseover', () => {
+    if (!isClicked) {
+      for (let i = index + 1; i < movie.length; i++) {
+        movie[i].classList.add('shift-movie');
+      }
+    }
+  });
 
-        element.addEventListener('mouseout', () => {
-          movie.forEach((el) => {
-            el.classList.remove('shift-movie');
-          });
-        });
+  element.addEventListener('mouseout', () => {
+    if (!isClicked) {
+      movie.forEach((el) => {
+        el.classList.remove('shift-album');
       });
+    }
+  });
 
+  element.addEventListener('click', () => {
+    isClicked = !isClicked; 
+    for (let i = index + 1; i < movie.length; i++) {
+      movie[i].classList.toggle('shift-movie', isClicked);
+    }
+  });
+});
+
+movie.forEach((element) => {
+  element.addEventListener('click', () => {
+    const movieReview = element.querySelector('.movie-review');
+    movieReview.classList.toggle('show');
+  });
+});
+      
       book.forEach((element, index) => {
-        element.addEventListener('mouseover', () => {
+  let isClicked = false; 
+  
+  element.addEventListener('mouseover', () => {
+    if (!isClicked) {
+      for (let i = index + 1; i < book.length; i++) {
+        book[i].classList.add('shift-movie');
+      }
+    }
+  });
 
-          for (let i = index + 1; i < book.length; i++) {
-            book[i].classList.add('shift-movie');
-          }
-        });
-
-        element.addEventListener('mouseout', () => {
-          book.forEach((el) => {
-            el.classList.remove('shift-movie');
-          });
-        });
+  element.addEventListener('mouseout', () => {
+    if (!isClicked) {
+      book.forEach((el) => {
+        el.classList.remove('shift-movie');
       });
+    }
+  });
 
+  element.addEventListener('click', () => {
+    isClicked = !isClicked; 
+    for (let i = index + 1; i < book.length; i++) {
+      book[i].classList.toggle('shift-movie', isClicked);
+    }
+  });
+});
 
-
-
+book.forEach((element) => {
+  element.addEventListener('click', () => {
+    const bookReview = element.querySelector('.book-review');
+    bookReview.classList.toggle('show');
+  });
+});
+      
       //           album.forEach((el) => {
       //             el.classList.remove('blur');
       //           });
