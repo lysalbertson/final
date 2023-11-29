@@ -18,13 +18,50 @@
       font-family: "Montserrat";
       src: url("Montserrat-VariableFont_wght[1].ttf")
     }
-
+    .main-title{
+      color: white;
+      font-family: "title";
+      text-align: center;
+      font-size: 50px;
+      
+    }
+    .micro:hover{
+      animation-name: shrink;
+      animation-duration: 3s
+    }
+    .musings{
+      display: flex;
+      justify-content: center
+    }
+    .musings:hover{
+      animation-name: big;
+      animation-duration: 3s
+    }
+ 
+  
+    
+    @keyframes shrink{
+      0% {
+        scale: 1
+      }
+      100% {
+        scale: .3
+      }
+    }
+      @keyframes big{
+      0% {
+        transform: scaleY(1)
+      }
+      100% {
+        transform: scaleY(2)
+        }}
+    
     .mains {
       color: white;
       font-family: "title";
       font-size: 50px;
-      position: sticky;
-  
+      position: relative;
+      top: 15px
     }
 
     .title {
@@ -99,8 +136,6 @@
     .shift-album {
       transform: translateX(280px);
     }
-
-
 
     .movies-tv-container {
       border-bottom: black 3px solid;
@@ -200,6 +235,19 @@
     }
   </style>
   <body>
+    <div class="main-title">
+    <div class="micro">Micro </div>
+    <div class="musings">
+      <div class="odd">M</div>
+       <div class="even">u</div>
+       <div class="odd">s</div>
+       <div class="even">i</div>
+       <div class="odd">n</div>
+       <div class="even">g</div>
+       <div class="odd">s</div>
+      </div>
+    </div>
+    
     
     <div class="mains"> Music </div>
     <div class="album-container">
