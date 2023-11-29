@@ -21,8 +21,17 @@
     .main-title{
       color: white;
       font-family: "title";
-      text-align: center;
-      font-size: 50px;
+      font-size: 70px;
+      display: flex;
+      justify-content: center;
+      border-bottom: solid 2px white
+     
+    
+    }
+    .micro{
+      height: 50px;
+      width: min-content;
+      
       
     }
     .micro:hover{
@@ -30,30 +39,30 @@
       animation-duration: 3s
     }
     .musings{
-      display: flex;
-      justify-content: center
+      display: inline flex;
+      padding-left: 20px;
+      
     }
     .musings:hover{
-      animation-name: big;
+      animation-name: stretch;
       animation-duration: 3s
     }
- 
   
-    
     @keyframes shrink{
       0% {
-        scale: 1
+       scale: 1
       }
       100% {
-        scale: .3
+       scale: .01
       }
     }
-      @keyframes big{
+    
+      @keyframes stretch{
       0% {
         transform: scaleY(1)
       }
       100% {
-        transform: scaleY(2)
+        transform: scaleY(1.8)
         }}
     
     .mains {
