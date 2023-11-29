@@ -6,7 +6,7 @@
   </head>
   <style>
     body {
-      background-color: pink
+      background-color: #ffa1cc
     }
 
     @font-face {
@@ -18,51 +18,57 @@
       font-family: "Montserrat";
       src: url("Montserrat-VariableFont_wght[1].ttf")
     }
-    .main-title{
+
+    .main-title {
       color: white;
       font-family: "title";
       font-size: 70px;
       display: flex;
       justify-content: center;
       border-bottom: dotted 3px white
-     
-    
     }
-    .micro{
+
+    .micro {
       height: 50px;
       width: min-content;
     }
-    .micro:hover{
+
+    .micro:hover {
       animation-name: shrink;
       animation-duration: 8s
     }
-    .musings{
+
+    .musings {
       display: inline flex;
       padding-left: 20px;
-      
+
     }
-    .musings:hover{
+
+    .musings:hover {
       animation-name: stretch;
-  animation-duration: 5s 
+      animation-duration: 5s
     }
-  
-    @keyframes shrink{
+
+    @keyframes shrink {
       0% {
-       scale: 1
+        scale: 1
       }
+
       100% {
-       scale: .01
+        scale: .01
       }
     }
-    
-      @keyframes stretch{
+
+    @keyframes stretch {
       0% {
         transform: scaleY(1)
       }
+
       100% {
         transform: scaleY(1.8)
-        }}
-    
+      }
+    }
+
     .mains {
       color: white;
       font-family: "title";
@@ -123,25 +129,27 @@
       position: absolute;
       left: calc(100% + 1vw);
       top: 0;
-      overflow-y: scroll; 
-     
+      overflow-y: scroll;
+
     }
-    .music-review.show{
+
+    .music-review.show {
       display: block
     }
+
     .music-review::-webkit-scrollbar {
-     display: none
+      display: none
     }
 
     .music-img {
       height: 250px;
       width: 250px;
     }
-    
+
     .album:hover .music-review {
       display: block
     }
-    
+
 
     .shift-album {
       transform: translateX(280px);
@@ -182,10 +190,12 @@
       top: 0;
       overflow-y: scroll
     }
+
     .movie-review::-webkit-scrollbar {
-     display: none
+      display: none
     }
-    .movie-review.show{
+
+    .movie-review.show {
       display: block
     }
 
@@ -231,22 +241,26 @@
       position: absolute;
       left: calc(100% + 1vw);
       top: 0;
-     overflow-y: scroll
+      overflow-y: scroll
     }
+
     .book-review::-webkit-scrollbar {
-     display: none
+      display: none
     }
-    .book-review.show{
+
+    .book-review.show {
       display: block
     }
 
     .book:hover .book-review {
       display: block
     }
-    .logo{
+
+    .logo {
       height: 200px
     }
-    .logo-words{
+
+    .logo-words {
       font-size: 15px;
       text-align: center;
       font-family: "title"
@@ -254,16 +268,16 @@
   </style>
   <body>
     <div class="main-title">
-    <div class="micro">Micro </div>
-    <div class="musings"> Musings </div>
+      <div class="micro">Micro </div>
+      <div class="musings"> Musings </div>
     </div>
-    
+
     <div class="mains"> Music </div>
     <div class="album-container">
-        
-      <div class="album" >
-        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'" >
-        <div class="music-review" >
+
+      <div class="album">
+        <img class="music-img" src="Lorde_Pure_Heroine.png" alt="Album art for Lorde's 'Pure Heroine'">
+        <div class="music-review">
           <div class="title">
             Pure Heroine
           </div>
@@ -293,7 +307,7 @@
             Tina Snow
           </div>
           <div class="sentence">
-            I would die for Megan thee Stallion
+            I would die for Megan thee Stallion.
           </div>
           <div class="rankings">
             1. Hot Girl<br>
@@ -317,7 +331,7 @@
             Lungs
           </div>
           <div class="sentence">
-            Passion! Energy! Aggresion!:
+            Passion! Energy! Aggresion!
           </div>
           <div class="rankings">
             1. Rabbit Heart (Raise it Up)<br>
@@ -344,7 +358,7 @@
             Beyoncé
           </div>
           <div class="sentence">
-            XO alone propels this album to a peak that most artists will never see in their lifetime
+            XO alone propels this album to a peak that most artists will never see in their lifetime.
           </div>
           <div class="rankings">
             1. XO<br>
@@ -373,7 +387,7 @@
             Anti (Deluxe)
           </div>
           <div class="sentence">
-            A winner, great lyricism, high dancibility what more can one ask for?
+            A winner: great lyricism, high dancibility, what more can one ask for?
           </div>
           <div class="rankings">
             1. Same Ol' Mistakes<br>
@@ -429,7 +443,7 @@
             The Pinkprint
           </div>
           <div class="sentence">
-            Some of Nicki's most vulnerable, and it pays off
+            Some of Nicki's most vulnerable, and it pays off.
           </div>
           <div class="rankings">
             1. Favorite<br>
@@ -460,7 +474,7 @@
             GUTS
           </div>
           <div class="sentence">
-            I loved Sour, but this just didn't hit as hard
+            I loved Sour, but this just didn't hit as hard.
           </div>
           <div class="rankings">
             1. vampire<br>
@@ -536,7 +550,7 @@
             emails i can't send
           </div>
           <div class="sentence">
-            Pop music will never recover (this is a compliment)
+            Pop music will never recover (this is a compliment).
           </div>
           <div class="rankings">
             1. because i liked a boy<br>
@@ -563,7 +577,7 @@
             Midnights
           </div>
           <div class="sentence">
-            Just...not a fan? 13 y/o me loved T.Swift but I think the love has faded
+            Just...not a fan? 13 y/o me loved T. Swift but I think the love has faded
           </div>
           <div class="rankings">
             1. Bejewled<br>
@@ -584,13 +598,13 @@
         </div>
       </div>
       <div class="album">
-        <img class="music-img" src="Beyonce-Lemonade.png" alt="Lemonade by Beyonce album cover">
+        <img class="music-img" src="Beyonce-Lemonade.png" alt="Lemonade by Beyoncé album cover">
         <div class="music-review">
           <div class="title">
             Lemonade
           </div>
           <div class="sentence">
-            Beyonce's best, and the best album of all time.
+            Beyoncé's best and the best album of all time.
           </div>
           <div class="rankings">
             1. All Night<br>
@@ -612,18 +626,18 @@
       </div>
       <div class="album">
         <a href="https://open.spotify.com/user/lyssamariea" target="_blank">
-    <img class="logo" src="spotify.png" alt="green spotify logo">
-        </a>  
+          <img class="logo" src="spotify.png" alt="green spotify logo">
+        </a>
         <div class="logo-words">
-           See my monthly playlists!
-          </div>
+          See my monthly playlists!
+        </div>
       </div>
-      
-      
+
+
     </div>
     <div class="mains"> TV Shows and Movies </div>
     <div class="movies-tv-container">
-      
+
       <div class="movie">
         <img class="movies-img" src="blue-eye-samurai.jpg" alt="Blue Eye Samurai, an animated tv series">
         <div class="movie-review">
@@ -631,11 +645,11 @@
             Blue Eye Samurai
           </div>
           <div class="sentence">
-            Sorta queer, really beautiful, a good watch<br><br>
+            Sorta queer, really beautiful, a good watch.<br><br>
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-           This was for sure one of those first seasons that include an insane amount of set up for season 2. So the ending was <i>really</i> unsatisfying
+            This was for sure one of those first seasons that include an insane amount of set up for season 2. So the ending was <i>really</i> unsatisfying
             <br>
             <br>
             <b> <br>
@@ -643,7 +657,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="movie">
         <img class="movies-img" src="Lady-Bird.jpeg" alt="Lady Bird the Movie Poster">
         <div class="movie-review">
@@ -659,7 +673,7 @@
             <br>
             <br>
             <b> dir. Greta Gerwig<br>
-              How I watched: On my laptop in my bed (my arm fell asleep)</b>
+              How I watched: Avoiding doing coursework</b>
           </div>
         </div>
       </div>
@@ -671,7 +685,7 @@
             Interview with the Vampire
           </div>
           <div class="sentence">
-            Gay vampires in 1920s New Orleans, it's gonna be good.<br><br>
+            Gay vampires in 1920s New Orleans, ofc it was gonna be good.<br><br>
           </div>
           <div class="rankings">
             <b>9/10</b><br>
@@ -711,7 +725,7 @@
             Matilda
           </div>
           <div class="sentence">
-            Possibly the best movie of all time<br><br>
+            Possibly the best movie of all time.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
@@ -768,7 +782,7 @@
             The Meg
           </div>
           <div class="sentence">
-            Cheesy, but enjoyable<br><br>
+            Cheesy, but enjoyable.<br><br>
           </div>
           <div class="rankings">
             <b>8.5/10</b><br>
@@ -808,15 +822,15 @@
             Shameless (up to season 4)
           </div>
           <div class="sentence">
-            Good until it wasn't<br><br>
+            Good until it wasn't.<br><br>
           </div>
           <div class="rankings">
             <b>7/10</b><br>
-            I loved this show until it got old. Like we get it Frank is an awful dad, give me <i>something</i> else. My final straw was when it started to get like day time tv.
+            I loved this show until it got old. Like we get it, Frank is an awful dad, give me <i>something</i> else. My final straw was when it started to get like daytime tv.
             <br>
             <br>
             <b>
-              How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
+              How I watched: Crocheting a bunch of granny squares for my daily enrichment activity</b>
           </div>
         </div>
       </div>
@@ -827,7 +841,7 @@
             Beef
           </div>
           <div class="sentence">
-            Good! But had tough competition<br><br>
+            Good! But had tough competition.<br><br>
           </div>
           <div class="rankings">
             <b>9/10</b><br>
@@ -835,7 +849,7 @@
             <br>
             <br>
             <b>
-              How I watched: Crocheting a bunch of granny squares for my daily enrichment</b>
+              How I watched: Crocheting a bunch of granny squares for my daily enrichment activity</b>
           </div>
         </div>
       </div>
@@ -885,11 +899,11 @@
             The Little Mermaid
           </div>
           <div class="sentence">
-            I liked the songs<br><br>
+            I liked the songs.<br><br>
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-            It was good. I'm not a fan of The Little Mermaid in general but the soundtrack is killer.
+            It was good. I'm not a fan of<i> The Little Mermaid </i>in general but the soundtrack is killer.
             <br>
             <br>
             <b> dir. Rob Marshall<br>
@@ -925,7 +939,7 @@
             Super Mario Bros.
           </div>
           <div class="sentence">
-            Peaches, Peaches, Peaches<br><br>
+            Peaches, Peaches, Peaches, Peachesss<br><br>
           </div>
           <div class="rankings">
             <b>7/10</b><br>
@@ -945,7 +959,7 @@
             Parasite
           </div>
           <div class="sentence">
-            The rewatchability is insane<br><br>
+            The rewatchability is insane.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
@@ -964,11 +978,11 @@
             Puss in Boots: The Last Wish
           </div>
           <div class="sentence">
-            Shrek has only brought about good things in my life<br><br>
+            <i>Shrek</i> has only brought about good things in my life.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
-            This was so beautiful. About death and life and found family, and dog with no name. Ugh, I feel honored to have seen it
+            This was so beautiful. About death, and life, and found family, and dog with no name. Ugh, I feel honored to have seen it
             <br>
             <br>
             <b> dir. Joel Crawford<br>
@@ -989,27 +1003,27 @@
             Throne of the Fallen
           </div>
           <div class="sentence">
-            Kingdom of the Wicked was wayyy better, I'm disappointed<br><br>
+            <i>Kingdom of the Wicked</i> was wayyy better, I'm disappointed.<br><br>
           </div>
           <div class="rankings">
             <b>7/10</b><br>
-            Read this if you like a weird mix of smut and plot, puzzles, an unstatisfying ending
+            Read this if you like a weird mix of smut and plot, puzzles, and an unstatisfying ending
           </div>
         </div>
       </div>
 
       <div class="book">
-        <img class="book-img" src="fall-of-wrath-and-ruin.jpg" alt="Cover for Fall of Wrath and Ruin by Jennifer Armentrout">
+        <img class="book-img" src="fall-of-wrath-and-ruin.jpg" alt="Cover for Fall of Ruin and Wrath by Jennifer Armentrout">
         <div class="book-review">
           <div class="title">
             Fall of Ruin and Wrath
           </div>
           <div class="sentence">
-            I used to be a JLA stan... She's losing me<br><br>
+            I used to be a JLA stan... She's losing me.<br><br>
           </div>
           <div class="rankings">
             <b>6/10</b><br>
-            Read this if you like booktok romantasy faves, a plot that doesn't really matter, having a little fun, but at what cost?
+            Read this if you like booktok romantasy faves, a plot that doesn't really matter, and having a little fun, but at what cost?
           </div>
         </div>
       </div>
@@ -1021,11 +1035,11 @@
             The Poppy War
           </div>
           <div class="sentence">
-            I think i can't continue the seriesbecase Rin is... not doing too hot, but it was fun while it lasted<br><br>
+            I think i can't continue the series because Rin is... not doing too hot, but it was fun while it lasted<br><br>
           </div>
           <div class="rankings">
             <b>9/10</b><br>
-            Read this if you like amazing world building, an insane protagonist, epic fantasies
+            Read this if you like amazing world building, an insane protagonist, and epic fantasies
           </div>
         </div>
       </div>
@@ -1037,11 +1051,11 @@
             Things We Hide From the Light
           </div>
           <div class="sentence">
-           yeah... fame has changed Lucy that's for sure<br><br>
+            yeah... fame has changed Lucy that's for sure.<br><br>
           </div>
           <div class="rankings">
             <b>3/10</b><br>
-            Read this if you like copaganda, 40 year olds who act like children, not having fun
+            Read this if you like copaganda, 40 year olds who act like children, and not having fun
           </div>
         </div>
       </div>
@@ -1053,11 +1067,11 @@
             The Shape of Water
           </div>
           <div class="sentence">
-          What a weird funky amazing book<br><br>
+            What a weird, funky, amazing book.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
-            Read this if you like weird shit, crying, beautiful love stories
+            Read this if you like weird shit, crying, and beautiful love stories.
           </div>
         </div>
       </div>
@@ -1073,7 +1087,7 @@
           </div>
           <div class="rankings">
             <b>6/10</b><br>
-            Read this if you like booktok romantasy faves, convoluted world building, smut 
+            Read this if you like booktok romantasy faves, convoluted world building, and smut
           </div>
         </div>
       </div>
@@ -1085,11 +1099,11 @@
             The Sweet Series
           </div>
           <div class="sentence">
-            reread the entire series within 2 days<br><br>
+            Reread the entire series within 2 days--it held up.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
-            Read this if you like YA paranormal romance, having a good time, unique world building
+            Read this if you like YA paranormal romance, having a good time, and unique world building
           </div>
         </div>
       </div>
@@ -1101,7 +1115,7 @@
             Wolf, Willow, Witch
           </div>
           <div class="sentence">
-            The MMC did have a dog head... but it was okay<br><br>
+            The MMC did have a dog head... but it was okay.<br><br>
           </div>
           <div class="rankings">
             <b>9/10</b><br>
@@ -1121,7 +1135,7 @@
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-            Read this if you like fairy tales, YA fantasy, whiny heroines
+            Read this if you like fairy tales, YA fantasy, and whiny heroines
           </div>
         </div>
       </div>
@@ -1137,7 +1151,7 @@
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-            Read this if you like booktok faves, fantasy romance, an alright story
+            Read this if you like booktok faves, fantasy romance,and an alright story
           </div>
         </div>
       </div>
@@ -1149,11 +1163,11 @@
             Open Water
           </div>
           <div class="sentence">
-            Not even the second person pov could make me not love this book<br><br>
+            Not even the second person pov could make me not love this book.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
-            Read this if you like beautiful, flowery writing, crying, love letters
+            Read this if you like beautiful, flowery writing, crying, and love letters
           </div>
         </div>
       </div>
@@ -1169,7 +1183,7 @@
           </div>
           <div class="rankings">
             <b>9/10</b><br>
-            Read this if you like the <i>idea</i> of Octavia Butler, YA early 2010s dystopian novels, Black fmcs
+            Read this if you like the <i>idea</i> of Octavia Butler, YA early 2010s dystopian novels, and Black FMCs
           </div>
         </div>
       </div>
@@ -1181,11 +1195,11 @@
             Heart, Haunt, Havoc
           </div>
           <div class="sentence">
-            I took like 6 months to finish this 100 page book...<br><br>
+            I took like 6 months to finish this 160 page book...<br><br>
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-            Read this if you like mystical vibes, short reads, queer people
+            Read this if you like mystical vibes, short reads, and queer people
           </div>
         </div>
       </div>
@@ -1201,7 +1215,7 @@
           </div>
           <div class="rankings">
             <b>7/10</b><br>
-            Read this if you like fantasy romance, quick reads, booktok faves
+            Read this if you like fantasy romance, quick reads, and booktok faves
           </div>
         </div>
       </div>
@@ -1213,11 +1227,11 @@
             Exodus 20:3
           </div>
           <div class="sentence">
-            Going thru a reading slump, short books only<br><br>
+            Going thru a reading slump, short books only.<br><br>
           </div>
           <div class="rankings">
             <b>9/10</b><br>
-            Read this if you like queer stories, quick reads, religious eroticism
+            Read this if you like queer stories, quick reads, and religious eroticism
           </div>
         </div>
       </div>
@@ -1233,7 +1247,7 @@
           </div>
           <div class="rankings">
             <b>8/10</b><br>
-            Read this if you like fairy tale retellings, dark-ish stories, smut
+            Read this if you like fairy tale retellings, dark-ish stories, and smut
           </div>
         </div>
       </div>
@@ -1245,11 +1259,11 @@
             Pride and Prejudice
           </div>
           <div class="sentence">
-            idk, i didn't get the hype<br><br>
+            idk, I didn't get the hype.<br><br>
           </div>
           <div class="rankings">
             <b>7/10</b><br>
-            Read this if you like the classics, romance that doesn't really feel romantic, being a bit bored
+            Read this if you like the classics, romance that doesn't really feel romantic, and being a bit bored
           </div>
         </div>
       </div>
@@ -1265,7 +1279,7 @@
           </div>
           <div class="rankings">
             <b>10/10</b><br>
-            Read this if you like feeling nostalgic, going on adventures, something light and fun
+            Read this if you like feeling nostalgic, going on adventures, and something light and fun
           </div>
         </div>
       </div>
@@ -1277,7 +1291,7 @@
             Get a Life, Chloe Brown
           </div>
           <div class="sentence">
-            I reread this for my thesis, still a good time<br><br>
+            I reread this for my thesis, still a good time.<br><br>
           </div>
           <div class="rankings">
             <b>10/10</b><br>
@@ -1285,138 +1299,130 @@
           </div>
         </div>
       </div>
-      
+
       <div class="book">
         <a href="https://app.thestorygraph.com/profile/lyssaisreading" target="_blank">
-    <img class="logo" src="storygraph.png" alt="The storygraph logo">
-        </a> 
-         <div class="logo-words">
-           See what else I'm reading!
-          </div>
+          <img class="logo" src="storygraph.png" alt="The storygraph logo">
+        </a>
+        <div class="logo-words">
+          See what else I'm reading!
         </div>
-      
+      </div>
+
     </div>
-    
-    
-    
-    
+
+
+
+
     <script>
       const album = document.querySelectorAll('.album');
       const movie = document.querySelectorAll('.movie');
       const book = document.querySelectorAll('.book')
-     
-album.forEach((element, index) => {
-  let isClicked = false; 
-  
-  element.addEventListener('mouseover', () => {
-    if (!isClicked) {
-      for (let i = index + 1; i < album.length; i++) {
-        album[i].classList.add('shift-album');
-      }
-    }
-  });
 
-  element.addEventListener('mouseout', () => {
-    if (!isClicked) {
-      album.forEach((el) => {
-        el.classList.remove('shift-album');
+      album.forEach((element, index) => {
+        let isClicked = false;
+
+        element.addEventListener('mouseover', () => {
+          if (!isClicked) {
+            for (let i = index + 1; i < album.length; i++) {
+              album[i].classList.add('shift-album');
+            }
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          if (!isClicked) {
+            album.forEach((el) => {
+              el.classList.remove('shift-album');
+            });
+          }
+        });
+
+        element.addEventListener('click', () => {
+          isClicked = !isClicked;
+          for (let i = index + 1; i < album.length; i++) {
+            album[i].classList.toggle('shift-album', isClicked);
+          }
+        });
       });
-    }
-  });
 
-  element.addEventListener('click', () => {
-    isClicked = !isClicked; 
-    for (let i = index + 1; i < album.length; i++) {
-      album[i].classList.toggle('shift-album', isClicked);
-    }
-  });
-});
-
-album.forEach((element) => {
-  element.addEventListener('click', () => {
-    const musicReview = element.querySelector('.music-review');
-    musicReview.classList.toggle('show');
-  });
-});
-      
-      
-movie.forEach((element, index) => {
-  let isClicked = false; 
-  
-  element.addEventListener('mouseover', () => {
-    if (!isClicked) {
-      for (let i = index + 1; i < movie.length; i++) {
-        movie[i].classList.add('shift-movie');
-      }
-    }
-  });
-
-  element.addEventListener('mouseout', () => {
-    if (!isClicked) {
-      movie.forEach((el) => {
-        el.classList.remove('shift-movie');
+      album.forEach((element) => {
+        element.addEventListener('click', () => {
+          const musicReview = element.querySelector('.music-review');
+          musicReview.classList.toggle('show');
+        });
       });
-    }
-  });
 
-  element.addEventListener('click', () => {
-    isClicked = !isClicked; 
-    for (let i = index + 1; i < movie.length; i++) {
-      movie[i].classList.toggle('shift-movie', isClicked);
-    }
-  });
-});
 
-movie.forEach((element) => {
-  element.addEventListener('click', () => {
-    const movieReview = element.querySelector('.movie-review');
-    movieReview.classList.toggle('show');
-  });
-});
-      
+      movie.forEach((element, index) => {
+        let isClicked = false;
+
+        element.addEventListener('mouseover', () => {
+          if (!isClicked) {
+            for (let i = index + 1; i < movie.length; i++) {
+              movie[i].classList.add('shift-movie');
+            }
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          if (!isClicked) {
+            movie.forEach((el) => {
+              el.classList.remove('shift-movie');
+            });
+          }
+        });
+
+        element.addEventListener('click', () => {
+          isClicked = !isClicked;
+          for (let i = index + 1; i < movie.length; i++) {
+            movie[i].classList.toggle('shift-movie', isClicked);
+          }
+        });
+      });
+
+      movie.forEach((element) => {
+        element.addEventListener('click', () => {
+          const movieReview = element.querySelector('.movie-review');
+          movieReview.classList.toggle('show');
+        });
+      });
+
       book.forEach((element, index) => {
-  let isClicked = false; 
-  
-  element.addEventListener('mouseover', () => {
-    if (!isClicked) {
-      for (let i = index + 1; i < book.length; i++) {
-        book[i].classList.add('shift-movie');
-      }
-    }
-  });
+        let isClicked = false;
 
-  element.addEventListener('mouseout', () => {
-    if (!isClicked) {
-      book.forEach((el) => {
-        el.classList.remove('shift-movie');
+        element.addEventListener('mouseover', () => {
+          if (!isClicked) {
+            for (let i = index + 1; i < book.length; i++) {
+              book[i].classList.add('shift-movie');
+            }
+          }
+        });
+
+        element.addEventListener('mouseout', () => {
+          if (!isClicked) {
+            book.forEach((el) => {
+              el.classList.remove('shift-movie');
+            });
+          }
+        });
+
+        element.addEventListener('click', () => {
+          isClicked = !isClicked;
+          for (let i = index + 1; i < book.length; i++) {
+            book[i].classList.toggle('shift-movie', isClicked);
+          }
+        });
       });
-    }
-  });
 
-  element.addEventListener('click', () => {
-    isClicked = !isClicked; 
-    for (let i = index + 1; i < book.length; i++) {
-      book[i].classList.toggle('shift-movie', isClicked);
-    }
-  });
-});
+      book.forEach((element) => {
+        element.addEventListener('click', () => {
+          const bookReview = element.querySelector('.book-review');
+          bookReview.classList.toggle('show');
+        });
+      });
 
-book.forEach((element) => {
-  element.addEventListener('click', () => {
-    const bookReview = element.querySelector('.book-review');
-    bookReview.classList.toggle('show');
-  });
-});
-      
-      //           album.forEach((el) => {
-      //             el.classList.remove('blur');
-      //           });
 
-      //           album.forEach((el, i) => {
-      //             if (i !== index) {
-      //               el.classList.add('blur');
-      //             }
-      //           });
     </script>
   </body>
 </html>
