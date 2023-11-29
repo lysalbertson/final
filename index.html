@@ -24,15 +24,13 @@
       font-size: 70px;
       display: flex;
       justify-content: center;
-      border-bottom: solid 2px white
+      border-bottom: dotted 3px white
      
     
     }
     .micro{
       height: 50px;
       width: min-content;
-      
-      
     }
     .micro:hover{
       animation-name: shrink;
@@ -45,7 +43,7 @@
     }
     .musings:hover{
       animation-name: stretch;
-/*       animation-duration: 5s */
+  animation-duration: 5s 
     }
   
     @keyframes shrink{
@@ -76,9 +74,10 @@
     .title {
       font-family: "title";
       text-align: center;
-      border-bottom: dotted black 2px;
+      border-bottom: dotted white 2px;
       font-size: 26px;
-      text-wrap: wrap
+      text-wrap: wrap;
+      color: white
     }
 
     .sentence {
@@ -86,17 +85,19 @@
       text-align: center;
       font-size: 14px;
       text-wrap: wrap;
-      font-weight: bold
+      font-weight: bold;
+      color: white
     }
 
     .rankings {
       font-family: "Montserrat";
       text-align: center;
-      text-wrap: wrap
+      text-wrap: wrap;
+      color: white
     }
 
     .album-container {
-      border-bottom: black 3px solid;
+      border-bottom: white 3px dotted;
       padding-bottom: 3vh;
       padding-top: 3vh;
       overflow-x: scroll;
@@ -147,7 +148,7 @@
     }
 
     .movies-tv-container {
-      border-bottom: black 3px solid;
+      border-bottom: white 3px dotted;
       padding-bottom: 3vh;
       padding-top: 3vh;
       overflow-x: scroll;
@@ -197,7 +198,7 @@
     }
 
     .book-container {
-      border-bottom: black 3px solid;
+      border-bottom: white 3px dotted;
       padding-bottom: 3vh;
       padding-top: 3vh;
       overflow-x: scroll;
@@ -242,21 +243,20 @@
     .book:hover .book-review {
       display: block
     }
+    .logo{
+      height: 200px
+    }
+    .logo-words{
+      font-size: 15px;
+      text-align: center;
+      font-family: "title"
+    }
   </style>
   <body>
     <div class="main-title">
     <div class="micro">Micro </div>
-    <div class="musings">
-      <div class="odd">M</div>
-       <div class="even">u</div>
-       <div class="odd">s</div>
-       <div class="even">i</div>
-       <div class="odd">n</div>
-       <div class="even">g</div>
-       <div class="odd">s</div>
-      </div>
+    <div class="musings"> Musings </div>
     </div>
-    
     
     <div class="mains"> Music </div>
     <div class="album-container">
@@ -317,7 +317,7 @@
             Lungs
           </div>
           <div class="sentence">
-            Me, if I was a woodland fairy:
+            Passion! Energy! Aggresion!:
           </div>
           <div class="rankings">
             1. Rabbit Heart (Raise it Up)<br>
@@ -338,10 +338,10 @@
         </div>
       </div>
       <div class="album">
-        <img class="music-img" src="Beyoncé-Beyoncé.png" alt="Beyonce's self titled album cover">
+        <img class="music-img" src="Beyoncé-Beyoncé.png" alt="Beyoncé's self titled album cover">
         <div class="music-review">
           <div class="title">
-            Beyonce
+            Beyoncé
           </div>
           <div class="sentence">
             XO alone propels this album to a peak that most artists will never see in their lifetime
@@ -486,7 +486,7 @@
             Unreal Unearth
           </div>
           <div class="sentence">
-            The songs I liked I <i> really</i> liked!
+            The songs I liked I <i>really</i> liked!
           </div>
           <div class="rankings">
             1. Eat Your Young<br>
@@ -516,7 +516,7 @@
             Sugar Symphony
           </div>
           <div class="sentence">
-            Most underrated collection of songs of <i>all time</i>
+            Most underrated collection of songs of <i>all time</i> <br><br>
           </div>
           <div class="rankings">
             1. Fall<br>
@@ -610,8 +610,16 @@
           </div>
         </div>
       </div>
-
-
+      <div class="album">
+        <a href="https://open.spotify.com/user/lyssamariea" target="_blank">
+    <img class="logo" src="spotify.png" alt="green spotify logo">
+        </a>  
+        <div class="logo-words">
+           See my monthly playlists!
+          </div>
+      </div>
+      
+      
     </div>
     <div class="mains"> TV Shows and Movies </div>
     <div class="movies-tv-container">
@@ -1277,6 +1285,16 @@
           </div>
         </div>
       </div>
+      
+      <div class="book">
+        <a href="https://app.thestorygraph.com/profile/lyssaisreading" target="_blank">
+    <img class="logo" src="storygraph.png" alt="The storygraph logo">
+        </a> 
+         <div class="logo-words">
+           See what else I'm reading!
+          </div>
+        </div>
+      
     </div>
     
     
